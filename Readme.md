@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Виктория Калугина](https://up.htmlacademy.ru/htmlcss/39/user/1788421).
-* Наставник: [Александр Зиновьев] (https://htmlacademy.ru/profile/id198751)
+* Наставник: [Александр Зиновьев](https://htmlacademy.ru/profile/id198751)
 
 * Мой проект: [Седона](https://toryatoria.github.io/1788421-sedona-39/)
 
