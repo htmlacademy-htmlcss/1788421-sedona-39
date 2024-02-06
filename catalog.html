@@ -9,25 +9,25 @@
 
 <body>
   <header class="catalog-headr" data-test="header">
-    <nav class="navigation">
-      <a class="nav-main-logo" href="index.html"><img src="" alt="логотип Седоны"></a>
+    <a class="nav-main-logo" href="index.html"><img src="" alt="логотип Седоны"></a>
 
+    <nav class="navigation">
       <ul class="nav-list">
         <li class="nav-item"><a class="nav-link " href="index.html">Главная</a></li>
-        <li class="nav-item"><a class="nav-link" href="">О седоне</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">О седоне</a></li>
         <li class="nav-item"><a class="nav-link nav-link-current">Гостиницы</a></li>
       </ul>
 
       <ul class="nav-user">
-        <li class="nav-user-item"><a class="nav-user-link" href=""><span class="visually-hidden">Поиск</span> </a></li>
+        <li class="nav-user-item"><a class="nav-user-link" href="#"><span class="visually-hidden">Поиск</span> </a></li> <!-- Куда же ведет эта беда?!!!-->
         <li class="nav-user-item">
-          <a class="nav-user-link nav-user-link-favorit" href="">
+          <a class="nav-user-link nav-user-link-favorit" href="#">
             <span class="visually-hidden">Избранное</span>
             <span class="favorit-page">12</span>
           </a>
         </li>
       </ul>
-      <a class="header-button" href="">Хочу сюда</a>
+      <button class="button" type="button"> Хочу сюда</button> <!-- открывает модальное окно -->
     </nav>
   </header>
 
@@ -117,7 +117,7 @@
     </section>
 
     <section class="catalog" data-test="catalog">
-      <h2 class="catalog-title"> Найдено гостиниц: 38</h2>
+      <h2 class="h2-lead"> Найдено гостиниц: 38</h2>
 
       <div class="wrap-sort">
         <select class="select-control" aria-label="Сортировка">
@@ -157,16 +157,10 @@
           <p class="hotel-type">Гостиница</p>
           <p class="hotel-price">От 4000 ₽</p>
 
-          <a class="hotel-button" href="">подробнее</a>
-          <a class="hotel-button btn-select" href="">в избранное</a>
+          <a class="button" href="">подробнее</a>
+          <button class="button button_color" type="button">в избранное</button> <!-- какое-то действие по добавлению в избранное -->
 
-          <ol class="rating-list">
-            <li class="rating-item"><span class="visually-hidden">1</span></li>
-            <li class="rating-item"><span class="visually-hidden">2</span></li>
-            <li class="rating-item"><span class="visually-hidden">3</span></li>
-            <li class="rating-item"><span class="visually-hidden">4</span></li>
-          </ol>
-
+          <div class="star star-4"><span class="visually-hidden">4 звезды</span></div>
           <p class="rating-text">Рейтинг: 8,5</p>
         </li>
 
@@ -179,16 +173,10 @@
           <p class="hotel-type">Гостиница</p>
           <p class="hotel-price">От 5000 ₽</p>
 
-          <a class="hotel-button" href="">подробнее</a>
-          <a class="hotel-button btn-select" href="">в избранном</a>
+          <a class="button" href="">подробнее</a>
+          <button class="button button_color button-select" type="button">в избранное</button> <!--какое-то действие c избранным, просмотв или удаление из избр.-->
 
-          <ol class="rating-list">
-            <li class="rating-item"><span class="visually-hidden">1</span></li>
-            <li class="rating-item"><span class="visually-hidden">2</span></li>
-            <li class="rating-item"><span class="visually-hidden">3</span></li>
-            <li class="rating-item"><span class="visually-hidden">4</span></li>
-          </ol>
-
+          <div class="star star-4"><span class="visually-hidden">4 звезды</span></div>
           <p>Рейтинг: 9,2</p>
         </li>
 
@@ -200,16 +188,10 @@
           <p class="hotel-type">Гостиница</p>
           <p class="hotel-price">От 2500 ₽</p>
 
-          <a class="hotel-button" href="">подробнее</a>
-          <a class="hotel-button" href="">в избранное</a>
+          <a class="button" href="">подробнее</a>
+          <button class="button button_color" type="button">в избранное</button>
 
-          <ol class="rating-list">
-            <li class="rating-item"><span class="visually-hidden">1</span></li>
-            <li class="rating-item"><span class="visually-hidden">2</span></li>
-            <li class="rating-item"><span class="visually-hidden">3</span></li>
-            <li class="rating-item"><span class="visually-hidden">4</span></li>
-          </ol>
-
+          <div class="star star-3"><span class="visually-hidden">3 звезды</span></div>
           <p>Рейтинг: 6,9</p>
         </li>
 
@@ -222,62 +204,52 @@
           <p class="hotel-type">Гостиница</p>
           <p class="hotel-price">От 1500 ₽</p>
 
-          <button>подробнее</button>
-          <button>в избранное</button>
-
           <a class="button" href="">подробнее</a>
-          <a class="button" href="">в избранное</a>
+          <button class="button button_color" type="button">в избранное</button>
 
-          <ol class="rating-list">
-            <li class="rating-item"><span class="visually-hidden">1</span></li>
-            <li class="rating-item"><span class="visually-hidden">2</span></li>
-            <li class="rating-item"><span class="visually-hidden">3</span></li>
-            <li class="rating-item"><span class="visually-hidden">4</span></li>
-          </ol>
-
+          <div class="star star-2"><span class="visually-hidden">2 звезды</span></div>
           <p>Рейтинг: 5,0</p>
         </li>
       </ul>
 
       <ul class="pagination">
         <li class="pag-item">
-          <a class="pag-link pag-current pag-disabled" href="">1</a>
+          <a class="pag-link pag-current pag-disabled button button-color" href="">1</a>
         </li>
 
         <li class="pag-item">
-          <a class="pag-link" href=""> 2</a>
+          <a class="pag-link button button-color" href=""> 2</a>
         </li>
 
         <li class="pag-item">
-          <a class="pag-link" href="">3</a>
+          <a class="pag-link button button-color" href="">3</a>
         </li>
         <li class="pag-item">
-          <a class="pag-link" href="">4</a>
+          <a class="pag-link button button-color" href="">4</a>
         </li>
         <li class="pag-item">
           <span class="pag-points">...</span>
         </li>
 
         <li class="pag-item">
-          <a class="pag-link" href="">10</a>
+          <a class="pag-link button button-color  " href="">10</a>
         </li>
       </ul>
     </section>
+</main>
 
-    <section class="subscribe subscribe-catalog" data-test="subscribe">
-      <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-      <p class="subscribe-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
-
+  <footer class="catalog-footer" data-test="footer">
+    <div class="subscribe" data-test="subscribe">
+      <h2 class="h2-lead">Подпишитесь на рассылку</h2>
+      <p class="subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
       <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="visually-hidden" for="subscribe-email">Email</label>
-        <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
-        <button class="button subscribe-button" type="submit">Подписаться</button>
+        <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email"
+          required>
+        <button class="button button-color" type="submit">Подписаться</button>
       </form>
-    </section>
-  </main>
-
-  <footer class="catalog-footer" data-test="footer">
+    </div>
     <ul class="footer-social">
       <li class="social-item"><a class="social-link" href="https://vk.com/htmlacademy"> <span
             class="visually-hidden">ВКонтакте</span></a></li>
