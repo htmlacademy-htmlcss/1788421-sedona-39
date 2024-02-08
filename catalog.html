@@ -9,13 +9,15 @@
 
   <body>
     <header class="catalog-headr" data-test="header">
-      <a class="main-logo"><img src="img/logo.svg" width="138" height="64" alt="логотип Седоны"></a>
+      <a class="main-logo" href="index.html">
+        <img src="img/logo.svg" width="138" height="64" alt="логотип Седоны">
+      </a>
 
       <nav class="navigation">
         <ul class="nav-list">
           <li class="nav-item"><a class="nav-link " href="index.html">Главная</a></li>
           <li class="nav-item"><a class="nav-link" href="#">О седоне</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-current">Гостиницы</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-current" href="#" aria-current="page">Гостиницы</a></li>
         </ul>
 
         <ul class="nav-user">
@@ -42,7 +44,7 @@
             </a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">Гостиницы</a>
+            <a class="breadcrumbs-link" href="#" aria-current="page">Гостиницы</a>
           </li>
         </ol>
       </header>
@@ -117,7 +119,7 @@
       </section>
 
       <section class="catalog" data-test="catalog">
-        <h2 class="h2-lead"> Найдено гостиниц: 38</h2>
+        <h2 class="title-lead"> Найдено гостиниц: 38</h2>
 
         <div class="wrap-sort">
           <select class="select-control" aria-label="Сортировка">
@@ -129,14 +131,14 @@
           <ul class="card-view-buttons">
             <li class="card-view-item">
               <button class="card-view-button card-view-active" type="button">
-               <span class="visually-hidden">Показать плиткой</span>
+                <span class="visually-hidden">Показать плиткой</span>
               </button>
             </li>
 
             <li class="card-view-item">
               <button class="card-view-button" type="button">
                 <span class="visually-hidden">Показать карточки</span>
-               </button>
+              </button>
             </li>
 
             <li class="card-view-item">
@@ -161,26 +163,34 @@
             <button class="button button_color" type="button">в избранное</button>
             <!-- какое-то действие по добавлению в избранное -->
 
-            <div class="star star-4"><span class="visually-hidden">4 звезды</span></div>
-            <p class="rating-text">Рейтинг: 8,5</p>
+            <div class="rating-wrap">
+              <div class="star star-4" role="img" aria-label="4 звезды">
+                <span class="visually-hidden">4 звезды</span>
+              </div>
+              <p class="rating-text">Рейтинг: 8,5</p>
+            </div>
           </li>
 
           <li class="hotel-item">
             <a class="hotel-link" href="">
-              <img class="hotel-img" src="img/card_hotel/hotel-2.jpg" width="300" height="212"
-                alt="горы далеко-далеко">
+              <img class="hotel-img" src="img/card_hotel/hotel-2.jpg" width="300" height="212" alt="горы далеко-далеко">
               <h3 class="hotel-title">Villas at Poco Diablo</h3>
             </a>
 
-            <p class="hotel-type">Гостиница</p>
-            <p class="hotel-price">От 5000 ₽</p>
+            <p class="hotel-type">Гостиница
+              <span class="hotel-price">От 5000 ₽</span>
+            </p>
 
             <a class="button" href="">подробнее</a>
             <button class="button button_color button-select" type="button">в избранное</button>
             <!--какое-то действие c избранным, просмотв или удаление из избр.-->
 
-            <div class="star star-4"><span class="visually-hidden">4 звезды</span></div>
-            <p>Рейтинг: 9,2</p>
+            <div class="rating-wrap">
+              <div class="star star-4" role="img" aria-label="4 звезды">
+                <span class="visually-hidden">4 звезды</span>
+              </div>
+              <p>Рейтинг: 9,2</p>
+            </div>
           </li>
 
           <li class="hotel-item">
@@ -188,14 +198,19 @@
               <img class="hotel-img" src="img/card_hotel/hotel-3.jpg" width="300" height="212" alt="горы уже ближе">
               <h3 class="hotel-title">Desert Quail Inn</h3>
             </a>
-            <p class="hotel-type">Гостиница</p>
-            <p class="hotel-price">От 2500 ₽</p>
+            <p class="hotel-type">Гостиница
+              <span class="hotel-price">От 2500 ₽</span>
+            </p>
 
             <a class="button" href="">подробнее</a>
             <button class="button button_color" type="button">в избранное</button>
 
-            <div class="star star-3"><span class="visually-hidden">3 звезды</span></div>
-            <p>Рейтинг: 6,9</p>
+            <div class="rating-wrap">
+              <div class="star star-3" role="img" aria-label="3 звезды">
+                <span class="visually-hidden">3 звезды</span>
+              </div>
+              <p>Рейтинг: 6,9</p>
+            </div>
           </li>
 
           <li class="hotel-item">
@@ -204,20 +219,26 @@
               <h3 class="hotel-title">GreenTree Inn</h3>
             </a>
 
-            <p class="hotel-type">Гостиница</p>
-            <p class="hotel-price">От 1500 ₽</p>
+            <p class="hotel-type">Гостиница
+              <span class="hotel-price">От 1500 ₽</span>
+            </p>
 
             <a class="button" href="">подробнее</a>
             <button class="button button_color" type="button">в избранное</button>
 
-            <div class="star star-2"><span class="visually-hidden">2 звезды</span></div>
-            <p>Рейтинг: 5,0</p>
+            <div class="rating-wrap">
+              <div class="star star-2" role="img" aria-label="2 звезды">
+                <span class="visually-hidden">2 звезды</span>
+              </div>
+              <p>Рейтинг: 5,0</p>
+            </div>
           </li>
         </ul>
 
-        <ul class="pagination">
+        <ol class="pagination">
           <li class="pag-item">
-            <a class="pag-link pag-current pag-disabled button button-color" href="">1</a>
+            <a class="pag-link pag-current pag-disabled button button-color" href="catalog.html"
+              aria-current="page">1</a>
           </li>
 
           <li class="pag-item">
@@ -234,39 +255,39 @@
             <span class="pag-points">...</span>
           </li>
 
-          <li class="pag-item">
-            <a class="pag-link button button-color  " href="">10</a>
+          <li class="pag-item" value="10">
+            <a class="pag-link button button-color  href="">10</a>
           </li>
-        </ul>
+        </ol>
       </section>
     </main>
 
-    <footer class="catalog-footer" data-test="footer">
-      <div class="subscribe" data-test="subscribe">
-        <h2 class="h2-lead">Подпишитесь на рассылку</h2>
-        <p class="subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+    <footer class=" catalog-footer" data-test="footer">
+              <div class="subscribe" data-test="subscribe">
+                <h2 class="title-lead">Подпишитесь на рассылку</h2>
+                <p class="subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
-        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden" for="subscribe-email">Email</label>
-          <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email"
-            required>
-          <button class="button button-color" type="submit">Подписаться</button>
-        </form>
-      </div>
-      <ul class="footer-social">
-        <li class="social-item"><a class="social-link" href="https://vk.com/htmlacademy"> <span
-              class="visually-hidden">ВКонтакте</span></a></li>
-        <li class="social-item"><a class="social-link" href="https://t.me/htmlacademy "> <span
-              class="visually-hidden">Телеграм</span></a></li>
-        <li class="social-item"><a class="social-link" href="https://www.youtube.com/user/htmlacademyru"> <span
-              class="visually-hidden">Ютуб</span></a></li>
-      </ul>
+                <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+                  <label class="visually-hidden" for="subscribe-email">Email</label>
+                  <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email"
+                    required>
+                  <button class="button button-color" type="submit">Подписаться</button>
+                </form>
+              </div>
+              <ul class="footer-social">
+                <li class="social-item"><a class="social-link" href="https://vk.com/htmlacademy"> <span
+                      class="visually-hidden">ВКонтакте</span></a></li>
+                <li class="social-item"><a class="social-link" href="https://t.me/htmlacademy "> <span
+                      class="visually-hidden">Телеграм</span></a></li>
+                <li class="social-item"><a class="social-link" href="https://www.youtube.com/user/htmlacademyru"> <span
+                      class="visually-hidden">Ютуб</span></a></li>
+              </ul>
 
-      <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-        <img src="img/htmlacademy_logo.svg" width="115" height="33" alt="логотип htmlacademy">
-      </a>
-    </footer>
+              <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+              <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+                <img src="img/htmlacademy_logo.svg" width="115" height="33" alt="логотип htmlacademy">
+              </a>
+              </footer>
   </body>
 
 </html>

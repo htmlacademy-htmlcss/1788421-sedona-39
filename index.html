@@ -9,11 +9,13 @@
 
   <body>
     <header class="main-headr" data-test="header">
-      <a class="main-logo"><img src="img/logo.svg" width="138" height="64" alt="логотип Седоны"></a>
+      <a class="main-logo" href="#" aria-current="page">
+        <img src="img/logo.svg" width="138" height="64" alt="логотип Седоны">
+      </a>
 
       <nav class="navigation">
         <ul class="nav-list">
-          <li class="nav-item"><a class="nav-link nav-link-current">Главная</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-current" href="#" aria-current="page">Главная</a></li>
           <li class="nav-item"><a class="nav-link" href="#">О седоне</a></li>
           <li class="nav-item"><a class="nav-link" href="catalog.html">Гостиницы</a></li>
         </ul>
@@ -41,7 +43,7 @@
 
       <section class="advantages" data-test="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
-        <p class="h2-lead">Седона — небольшой городок в Аризоне,
+        <p class="title-lead">Седона — небольшой городок в Аризоне,
           заслуживающий большего!</p>
         <p class="subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
 
@@ -49,7 +51,7 @@
           <li class="advantages-item advantages-item-wide">
             <h3 class="advantages-title">Настоящий городок</h3>
             <p class="advantages-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="img/advantages/adv_1.jpg" width="800" height="385" alt="гостиница на фоне гор">
+            <img src="img/advantages/advantage_1.jpg" width="800" height="385" alt="гостиница на фоне гор">
           </li>
 
           <li class="advantages-item">
@@ -71,14 +73,14 @@
           <li class="advantages-item advantages-item-wide">
             <h3 class="advantages-title">Там есть мост дьявола</h3>
             <p class="advantages-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            <img src="img/advantages/adv_2.jpg" alt="Красивые горы" width="800" height="385">
+            <img src="img/advantages/advantage_2.jpg" alt="Красивые горы" width="800" height="385">
            </li>
         </ul>
       </section>
 
       <section class="service">
         <h2 class="visually-hidden">Сервис</h2>
-        <p class="h2-lead">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
+        <p class="title-lead">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
         <p class="subtitle">Опытный персонал и качественное обслуживание!</p>
 
         <ul class="service-list">
@@ -104,7 +106,7 @@
 
       <section class="search" id="search" data-test="search">
 				<h2 class="visually-hidden">Поиск гостиницы</h2>
-        <h2 class="h2-lead">Заинтересовались?</h2>
+        <h2 class="title-lead">Заинтересовались?</h2>
         <p class="subtitle">Укажите предполагаемые даты поездки,
           и мы покажем вам лучшие предложения гостиниц в Седоне </p>
         <a class="button search-link" href="catalog.html">Поиск гостиницы в Седоне</a>
@@ -115,7 +117,7 @@
 
     <footer class="main-footer" data-test="footer">
       <div class="subscribe subscribe-main" data-test="subscribe">
-        <h2 class="h2-lead">Подпишитесь на рассылку</h2>
+        <h2 class="title-lead">Подпишитесь на рассылку</h2>
         <p class="subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
 
