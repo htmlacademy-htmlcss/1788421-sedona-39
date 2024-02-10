@@ -1,0 +1,248 @@
+/*===================== шрифты ===========================*/
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+
+body {
+  font-family: "PT Sans", sans-serif;
+
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+
+  background-color: #F2F2F2;
+
+/*  max-width: 1200px;
+margin: 0 auto;
+*/
+
+}
+.main-title { /*  h2   */
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+}
+
+.title-lead { /*  h2   */
+
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.subtitle { /*  p   */
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.title-topic { /*  h3   */
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.phone-text {
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/*===================== сброс ===========================*/
+/*========= спросить Александра - можно так делаить или нет?=========*/
+
+a {
+  text-decoration: none;
+}
+
+/*
+ul, ol {
+  list-style: none;
+}
+
+section {
+  border: 2px solid red;
+}
+
+footer {
+  border: 2px solid green;
+
+}
+*/
+/*===================== общие стили ===========================*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+.button {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #756157;
+}
+
+.button-color {
+  background-color: #82B3D3;
+}
+
+.button-select {
+  background-color: #7DB54F;
+
+}
+/*
+
+.main-headr,
+.advantages,
+.service,
+.search,
+.main-footer,
+.catalog-headr,
+.catalog,
+.subscribe {
+  background-color: #ffffff;
+  box-shadow:0 10px 15px #cdcccc;
+}
+
+.hero,
+.main-headr,
+.advantages,
+.service,
+.search,
+.main-footer,
+.catalog-footer {
+  text-align: center;
+}
+*/
+/*===================== heder ===========================*/
+
+.nav-link {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+
+/*===================== hero ===========================*/
+
+.hero {
+background-image: url(../img/background/decor-corner.svg),
+                  url(../img/background/index-background.jpg);
+background-size:100% 57px, 100%;
+background-repeat: no-repeat;
+background-position:bottom, center;
+}
+
+/*========= advantages & service ===========================*/
+
+.advantages,
+.service {
+  text-align: center;
+
+}
+
+.qulaity-item {
+  background-color: #E6F0F6;
+}
+
+.qulaity-item-wide .title-topic {
+  color:#ffffff;
+}
+
+.qulaity-item-wide {
+  color:#ffffff;
+  background-color: #83B3D3;
+}
+
+.search {
+  text-align: center;
+}
+/*===================== subscribe ===========================*/
+
+.subscribe-main {
+  color: #ffffff;
+
+  background-image: url(../img/background/bg_subscribe.jpg);
+  background-size:100%;
+background-repeat: no-repeat;
+}
+
+.main-footer .title-lead {
+  color: #ffffff;
+
+}
+
+/*===================== CATALOG ===========================*/
+
+
+.filters {
+  color: #ffffff;
+
+background-image: url(../img/background/bg_filter.jpg);
+background-size:100% 100%;
+background-repeat: no-repeat;
+
+/*
+border: 5px solid blue;
+*/
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.filter-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+/*
+.filter-group {
+  border: none;
+}
+*/
+
+.hotel-title {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #000000;
+
+}
+
+.rating-text {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}

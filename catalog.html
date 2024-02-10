@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Седона гостиницы</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
   </head>
 
   <body>
@@ -20,11 +23,11 @@
           <li class="nav-item"><a class="nav-link nav-link-current" href="#" aria-current="page">Гостиницы</a></li>
         </ul>
 
-        <ul class="nav-user">
-          <li class="nav-user-item"><a class="nav-user-link" href="#"><span class="visually-hidden">Поиск</span> </a>
+        <ul class="nav-list nav-user">
+          <li class="nav-item nav-user-item"><a class="nav-link nav-user-link" href="#"><span class="visually-hidden">Поиск</span> </a>
           </li> <!-- Куда же ведет эта беда?!!!-->
-          <li class="nav-user-item">
-            <a class="nav-user-link nav-user-link-favorit" href="#">
+          <li class="nav-item nav-user-item">
+            <a class="nav-link  nav-user-link nav-user-link-favorit" href="#">
               <span class="visually-hidden">Избранное</span>
               <span class="favorit-page">12</span>
             </a>
@@ -35,21 +38,21 @@
     </header>
 
     <main class="inner-main" data-test="main">
-      <header class="inner-header">
-        <h1 class="inner-header-title">Гостиницы Седоны</h1>
-        <ol class="breadcrumbs">
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
-              <span class="visually-hidden">Главная</span>
-            </a>
-          </li>
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="#" aria-current="page">Гостиницы</a>
-          </li>
-        </ol>
-      </header>
-
       <section class="filters" data-test="filter">
+        <header class="inner-header">
+          <h1 class="main-title">Гостиницы Седоны</h1>
+          <ol class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
+                <span class="visually-hidden">Главная</span>
+              </a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="#" aria-current="page">Гостиницы</a>
+            </li>
+          </ol>
+        </header>
+
         <h2 class="visually-hidden">Фильтры</h2>
 
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
@@ -160,7 +163,7 @@
             <p class="hotel-price">От 4000 ₽</p>
 
             <a class="button" href="">подробнее</a>
-            <button class="button button_color" type="button">в избранное</button>
+            <button class="button button-color" type="button">в избранное</button>
             <!-- какое-то действие по добавлению в избранное -->
 
             <div class="rating-wrap">
@@ -182,7 +185,7 @@
             </p>
 
             <a class="button" href="">подробнее</a>
-            <button class="button button_color button-select" type="button">в избранное</button>
+            <button class="button button-select" type="button button-color">в избранном</button>
             <!--какое-то действие c избранным, просмотв или удаление из избр.-->
 
             <div class="rating-wrap">
@@ -203,7 +206,7 @@
             </p>
 
             <a class="button" href="">подробнее</a>
-            <button class="button button_color" type="button">в избранное</button>
+            <button class="button button-color" type="button">в избранное</button>
 
             <div class="rating-wrap">
               <div class="star star-3" role="img" aria-label="3 звезды">
@@ -224,7 +227,7 @@
             </p>
 
             <a class="button" href="">подробнее</a>
-            <button class="button button_color" type="button">в избранное</button>
+            <button class="button button-color" type="button">в избранное</button>
 
             <div class="rating-wrap">
               <div class="star star-2" role="img" aria-label="2 звезды">
@@ -283,7 +286,7 @@
                       class="visually-hidden">Ютуб</span></a></li>
               </ul>
 
-              <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+              <a class="phone-text" href="tel:+78128121212">+7 (812) 812-12-12</a>
               <a class="htmlacademy-link" href="https://htmlacademy.ru/">
                 <img src="img/htmlacademy_logo.svg" width="115" height="33" alt="логотип htmlacademy">
               </a>
