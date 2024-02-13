@@ -11,31 +11,40 @@
   </head>
 
   <body>
-    <header class="catalog-headr" data-test="header">
-      <a class="main-logo" href="index.html">
+    <header class="main-header" data-test="header">
+      <a class="main-logo" href="index.html" aria-current="page">
         <img src="img/logo.svg" width="138" height="64" alt="логотип Седоны">
       </a>
 
       <nav class="navigation">
         <ul class="nav-list">
-          <li class="nav-item"><a class="nav-link " href="index.html">Главная</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">О седоне</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-current" href="#" aria-current="page">Гостиницы</a></li>
+          <li class="nav-item">
+            <a class="nav-link " href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">О седоне</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-current" href="#" aria-current="page">Гостиницы</a>
+          </li>
         </ul>
 
-        <ul class="nav-list nav-user">
-          <li class="nav-item nav-user-item"><a class="nav-link nav-user-link" href="#"><span class="visually-hidden">Поиск</span> </a>
-          </li> <!-- Куда же ведет эта беда?!!!-->
-          <li class="nav-item nav-user-item">
-            <a class="nav-link  nav-user-link nav-user-link-favorit" href="#">
+        <ul class=" nav-list nav-user">
+          <li class="nav-item"><a class="nav-link" href="#search"><span class="visually-hidden">Поиск</span> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link user-link-favorit" href="#">
               <span class="visually-hidden">Избранное</span>
               <span class="favorit-page">12</span>
             </a>
           </li>
+          <li li class="nav-item">
+            <button class="button" type="button"> Хочу сюда</button> <!-- открывает модальное окно -->
+          </li>
         </ul>
-        <button class="button" type="button"> Хочу сюда</button> <!-- открывает модальное окно -->
       </nav>
     </header>
+
 
     <main class="inner-main" data-test="main">
       <section class="filters" data-test="filter">
@@ -116,15 +125,18 @@
             я пока не знаю как это сделать (обещали разобрать в 8 разделе)
           </fieldset>
 
-          <button class="button" type="submit">Применить</button>
-          <button class="button button-light" type="reset">Сбросить</button>
+          <div class="filter-wrapp">
+            <button class="button" type="submit">Применить</button>
+            <button class="button button-light" type="reset">Сбросить</button>
+          </div>
         </form>
       </section>
 
       <section class="catalog" data-test="catalog">
-        <h2 class="title-lead"> Найдено гостиниц: 38</h2>
 
         <div class="wrap-sort">
+          <h2 class="title-lead"> Найдено гостиниц: 38</h2>
+
           <select class="select-control" aria-label="Сортировка">
             <option value="popular"> Сначала дешёвые </option>
             <option value="cheap">Сначала дорогие</option>
@@ -159,8 +171,9 @@
               <h3 class="hotel-title">Amara Resort & Spa</h3>
             </a>
 
-            <p class="hotel-type">Гостиница</p>
-            <p class="hotel-price">От 4000 ₽</p>
+            <p class="hotel-type">Гостиница
+              <span class="hotel-price">От 4000 ₽</span>
+            </p>
 
             <a class="button" href="">подробнее</a>
             <button class="button button-color" type="button">в избранное</button>
@@ -192,7 +205,7 @@
               <div class="star star-4" role="img" aria-label="4 звезды">
                 <span class="visually-hidden">4 звезды</span>
               </div>
-              <p>Рейтинг: 9,2</p>
+              <p class="rating-text">Рейтинг: 9,2</p>
             </div>
           </li>
 
@@ -212,7 +225,7 @@
               <div class="star star-3" role="img" aria-label="3 звезды">
                 <span class="visually-hidden">3 звезды</span>
               </div>
-              <p>Рейтинг: 6,9</p>
+              <p class="rating-text">Рейтинг: 6,9</p>
             </div>
           </li>
 
@@ -233,7 +246,7 @@
               <div class="star star-2" role="img" aria-label="2 звезды">
                 <span class="visually-hidden">2 звезды</span>
               </div>
-              <p>Рейтинг: 5,0</p>
+              <p class="rating-text">Рейтинг: 5,0</p>
             </div>
           </li>
         </ul>
@@ -265,32 +278,47 @@
       </section>
     </main>
 
-    <footer class=" catalog-footer" data-test="footer">
-              <div class="subscribe" data-test="subscribe">
-                <h2 class="title-lead">Подпишитесь на рассылку</h2>
-                <p class="subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+    <footer class="main-footer" data-test="footer">
+      <div class="subscribe" data-test="subscribe">
+        <h2 class="title-lead">Подпишитесь на рассылку</h2>
+        <p class="subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
-                <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-                  <label class="visually-hidden" for="subscribe-email">Email</label>
-                  <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email"
-                    required>
-                  <button class="button button-color" type="submit">Подписаться</button>
-                </form>
-              </div>
-              <ul class="footer-social">
-                <li class="social-item"><a class="social-link" href="https://vk.com/htmlacademy"> <span
-                      class="visually-hidden">ВКонтакте</span></a></li>
-                <li class="social-item"><a class="social-link" href="https://t.me/htmlacademy "> <span
-                      class="visually-hidden">Телеграм</span></a></li>
-                <li class="social-item"><a class="social-link" href="https://www.youtube.com/user/htmlacademyru"> <span
-                      class="visually-hidden">Ютуб</span></a></li>
-              </ul>
 
-              <a class="phone-text" href="tel:+78128121212">+7 (812) 812-12-12</a>
-              <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-                <img src="img/htmlacademy_logo.svg" width="115" height="33" alt="логотип htmlacademy">
-              </a>
-              </footer>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="subscribe-email">Email</label>
+          <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email"
+            required>
+          <button class="button button-color" type="submit">Подписаться</button>
+        </form>
+      </div>
+      <div class="footer-wrapp">
+        <ul class="footer-social">
+          <li class="social-item">
+            <a class="social-link" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">ВКонтакте</span>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a class="social-link" href="https://t.me/htmlacademy ">
+              <span class="visually-hidden">Телеграм</span>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Ютуб</span>
+            </a>
+          </li>
+        </ul>
+
+        <a class="phone-text" href="tel:+78128121212">+7 (812) 812-12-12</a>
+
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+          <img src="img/htmlacademy_logo.svg" width="115" height="33" alt="логотип htmlacademy">
+        </a>
+      </div>
+    </footer>
   </body>
 
 </html>
