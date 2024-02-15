@@ -28,20 +28,14 @@ body {
   color: #333333;
 
   background-color: #F2F2F2;
-
-  /* outline: 5px solid #7DB54F; */
-
-  /*  max-width: 1200px;
-margin: 0 auto;
-*/
-
 }
 
 .main-title {
-  /*  h2   */
+  /*  h1   */
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
+
 }
 
 .title-lead {
@@ -78,20 +72,12 @@ margin: 0 auto;
 
 /*===================== сброс ===========================*/
 /*========= спросить Александра - можно так делаить или нет?=========*/
-
-a {
-  text-decoration: none;
-}
-
+/*
 * {
   box-sizing: border-box;
 }
+ */
 
-/*
-ul, ol {
-  list-style: none;
-}
-*/
 /*===================== общие стили ===========================*/
 .visually-hidden {
   position: absolute;
@@ -113,21 +99,26 @@ ul, ol {
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: #756157;
+  background-color: #82B3D3;
 }
 
 .button-color {
-  background-color: #82B3D3;
+  background-color: #756157;
 }
 
 .button-select {
   background-color: #7DB54F;
-
 }
 
-/*
+.button-light {
+  background-color: transparent;
+}
 
-.main-headr,
+.button-link {
+  text-decoration: none;
+}
+
+.main-header,
 .advantages,
 .service,
 .search,
@@ -136,25 +127,13 @@ ul, ol {
 .catalog,
 .subscribe {
   background-color: #ffffff;
-  box-shadow:0 10px 15px #cdcccc;
+  /* box-shadow:0 10px 15px #cdcccc; */
 }
 
-.hero,
-.main-headr,
-.advantages,
-.service,
-.search,
-.main-footer,
-.catalog-footer {
-  text-align: center;
-}
-*/
 /*===================== heder ===========================*/
 .main-header {
   display: flex;
   padding: 0 70px;
-
-  /* outline: 5px solid red; */
 }
 
 .main-logo {
@@ -167,23 +146,27 @@ ul, ol {
   line-height: 24px;
   font-weight: 700;
   color: #000000;
+  text-decoration: none;
+
 }
 
 .navigation {
   display: flex;
   justify-content: space-between;
-  gap: 285px;
+
 }
 
 .nav-list {
   width: 340px;
-
 }
 
+.favorit-page {
+  color: #ffffff;
+  background-color: #7DB54F;
+}
 /*===================== hero ===========================*/
 
 .hero {
-  /* outline: 5px solid red; */
   display: flex;
 
   background-image: url(../img/background/decor-corner.svg),
@@ -194,8 +177,8 @@ ul, ol {
 }
 
 .hero-img {
-  display: block;
-  margin: 51px auto 82px;
+  /* display: block;
+  margin: 51px auto 82px; */
 }
 
 
@@ -207,23 +190,23 @@ ul, ol {
 }
 
 .advantages {
-  padding-top: 69px;
+  /* padding-top: 69px; */
 }
 
 .service {
-  padding-top: 64px;
+  /* padding-top: 64px; */
 }
 
-.qulaity-list {
+/* .qulaity-list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
-}
+} */
 
 .qulaity-item {
-  width: 400px;
+  /* width: 400px; */
 
   background-color: rgba(130, 179, 212, 10%);
 }
@@ -246,34 +229,35 @@ ul, ol {
   background-color: #83B3D3;
 }
 
-/*===================== subscribe ===========================*/
+/*===================== search ===========================*/
 .search {
   text-align: center;
-  padding: 96px 0;
+  /* padding: 96px 0; */
 }
-
 /*===================== subscribe ===========================*/
 
 .subscribe {
-  padding: 96px 0 104px;
+  /* padding: 96px 0 104px; */
 
   text-align: center;
-
-  /* outline: 5px solid violet; */
 }
 
 .subscribe-main {
   color: #ffffff;
-
+background-color: #467AA9; /* цвет для фона просто взят с фоновой картинки пипеткой*/
   background-image: url(../img/background/bg_subscribe.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
+.subscribe-main .title-lead {
+  color:#ffffff;
+}
+
 .footer-wrapp {
   display: flex;
-  justify-content: space-between;
-  padding: 40px 70px 30px;
+  /* justify-content: space-between;
+  padding: 40px 70px 30px; */
 }
 
 .phone-text {
@@ -284,11 +268,13 @@ ul, ol {
 
 /*===================== CATALOG ===========================*/
 .filters {
-  /* outline: 5px solid red; */
-  padding: 35px 70px 70px;
+  /* padding: 35px 70px 70px; */
+
+  padding: 0 70px;
 
   color: #ffffff;
 
+  background-color: #467AA9;
   background-image: url(../img/background/bg_filter.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -298,6 +284,7 @@ ul, ol {
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
+  text-decoration: none;
 }
 
 .filter-title {
@@ -318,13 +305,13 @@ ul, ol {
 
 
 .catalog {
-  /* outline: 5px solid red; */
-  padding: 50px 70px 60px;
+  /* padding: 50px 70px 60px; */
+  padding: 0 70px;
 
 }
 
 .wrap-sort {
-  display: flex;
+  /* display: flex; */
 }
 
 .hotel-title {
@@ -335,14 +322,15 @@ ul, ol {
 }
 
 .hotels-list {
-  margin: 0;
+  /* margin: 0;
   padding: 0;
-  list-style: none;
+  list-style: none; */
+
+/*
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  /* outline: 5px solid green; */
-
+ */
 }
 
 .rating-text {
@@ -353,10 +341,8 @@ ul, ol {
 
 .hotel-item {
   width: 340px;
-  /* outline: 5px solid blue; */
-
 }
 
 .pagination {
-  display: flex;
+  /* display: flex; */
 }

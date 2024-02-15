@@ -1,0 +1,26 @@
+body {
+  outline: 5px solid #7DB54F;
+}
+
+.main-header,
+.hero,
+.filters,
+.catalog
+ {
+  outline: 5px solid red;
+
+}
+
+.navigation,
+.hotel-item {
+  outline: 5px solid blue;
+}
+
+.hotels-list {
+  outline: 5px solid green;
+}
+
+.subscribe {
+    outline: 5px solid violet;
+
+}
