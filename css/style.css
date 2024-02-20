@@ -15,14 +15,12 @@
   font-display: swap;
 }
 
-
+/*===================== шрифты ===========================*/
 body {
-  width: 1280px;
-  margin: 0 auto;
-  padding: 0 40px;
+  min-width: 1200px;
+  margin: 0;
 
   font-family: "PT Sans", sans-serif;
-
   font-size: 18px;
   line-height: 21px;
   color: #333333;
@@ -69,14 +67,18 @@ body {
   text-transform: uppercase;
   color: #000000;
 }
-
-/*===================== сброс ===========================*/
-/*========= спросить Александра - можно так делаить или нет?=========*/
 /*
-* {
-  box-sizing: border-box;
-}
- */
+.main-title,
+.title-lead,
+.subtitle,
+.title-topic,
+.phone-text,
+.nav-list,
+.qulaity-list,
+footer-social {
+  margin: 0;
+} */
+
 
 /*===================== общие стили ===========================*/
 .visually-hidden {
@@ -92,8 +94,17 @@ body {
   overflow: hidden;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 10px 15px #cdcccc;
+}
 
+/*===================== кнопки ===========================*/
 .button {
+  font-family: "PT Sans", sans-serif;
+
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -116,18 +127,6 @@ body {
 
 .button-link {
   text-decoration: none;
-}
-
-.main-header,
-.advantages,
-.service,
-.search,
-.main-footer,
-.catalog-headr,
-.catalog,
-.subscribe {
-  background-color: #ffffff;
-  /* box-shadow:0 10px 15px #cdcccc; */
 }
 
 /*===================== heder ===========================*/
@@ -153,7 +152,6 @@ body {
 .navigation {
   display: flex;
   justify-content: space-between;
-
 }
 
 .nav-list {
@@ -164,22 +162,26 @@ body {
   color: #ffffff;
   background-color: #7DB54F;
 }
+
 /*===================== hero ===========================*/
 
 .hero {
   display: flex;
 
+  color: #ffffff;
+  background-color: #467AA9;
   background-image: url(../img/background/decor-corner.svg),
     url(../img/background/index-background.jpg);
-  background-size: 100% 57px, 100%;
+  background-size: 100% auto, 100%;
   background-repeat: no-repeat;
   background-position: bottom, center;
 }
 
+/*
 .hero-img {
-  /* display: block;
-  margin: 51px auto 82px; */
-}
+  display: block;
+  margin: 51px auto 82px;
+} */
 
 
 /*========= advantages & service ===========================*/
@@ -189,18 +191,25 @@ body {
   text-align: center;
 }
 
+/*
 .advantages {
-  /* padding-top: 69px; */
+  padding-top: 69px;
 }
 
 .service {
-  /* padding-top: 64px; */
+  padding-top: 64px;
 }
 
+*/
+
 /* .qulaity-list {
+  padding: 0;
+} */
+
+/*
+.qulaity-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
   padding: 0;
   list-style: none;
 } */
@@ -211,9 +220,10 @@ body {
   background-color: rgba(130, 179, 212, 10%);
 }
 
+/*
 .qulaity-item-wide {
   width: 1200px;
-}
+} */
 
 .qulaity-item-20 {
   background-color: rgba(130, 179, 212, 20%);
@@ -234,6 +244,7 @@ body {
   text-align: center;
   /* padding: 96px 0; */
 }
+
 /*===================== subscribe ===========================*/
 
 .subscribe {
@@ -244,14 +255,15 @@ body {
 
 .subscribe-main {
   color: #ffffff;
-background-color: #467AA9; /* цвет для фона просто взят с фоновой картинки пипеткой*/
+  background-color: #467AA9;
+  /* цвет для фона просто взят с фоновой картинки пипеткой*/
   background-image: url(../img/background/bg_subscribe.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
 .subscribe-main .title-lead {
-  color:#ffffff;
+  color: #ffffff;
 }
 
 .footer-wrapp {
@@ -261,7 +273,6 @@ background-color: #467AA9; /* цвет для фона просто взят с 
 }
 
 .phone-text {
-
   width: 720px;
   text-align: center;
 }
@@ -273,7 +284,6 @@ background-color: #467AA9; /* цвет для фона просто взят с 
   padding: 0 70px;
 
   color: #ffffff;
-
   background-color: #467AA9;
   background-image: url(../img/background/bg_filter.jpg);
   background-size: 100% 100%;
@@ -303,16 +313,19 @@ background-color: #467AA9; /* цвет для фона просто взят с 
 }
 */
 
+.select-control {
+  font-family: "PT Sans", sans-serif;
+}
 
 .catalog {
   /* padding: 50px 70px 60px; */
   padding: 0 70px;
 
 }
-
+/*
 .wrap-sort {
-  /* display: flex; */
-}
+  display: flex;
+} */
 
 .hotel-title {
   font-size: 20px;
@@ -320,18 +333,18 @@ background-color: #467AA9; /* цвет для фона просто взят с 
   font-weight: 700;
   color: #000000;
 }
-
-.hotels-list {
-  /* margin: 0;
-  padding: 0;
-  list-style: none; */
-
 /*
+.hotels-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
- */
-}
+
+} */
 
 .rating-text {
   font-size: 16px;
@@ -342,7 +355,7 @@ background-color: #467AA9; /* цвет для фона просто взят с 
 .hotel-item {
   width: 340px;
 }
-
+/*
 .pagination {
-  /* display: flex; */
-}
+  display: flex;
+} */

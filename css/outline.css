@@ -1,6 +1,10 @@
 body {
   outline: 5px solid #7DB54F;
 }
+.container {
+  outline: 5px solid #4f9fb5;
+
+}
 
 .main-header,
 .hero,
