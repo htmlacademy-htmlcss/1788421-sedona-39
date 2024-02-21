@@ -189,6 +189,8 @@ min-height: 20px;
   display: flex;
   justify-content: space-between;
   gap: 285px;
+
+flex-grow: 1;
 }
 
 .favorit-page {
@@ -237,9 +239,20 @@ min-height: 20px;
 }
 
 .qulaity-item {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  min-height: 385px;
+
+  padding: 0 80px;
+
   box-sizing: border-box;
   width: 400px;
-padding: 113px 85px;
+/* padding: 113px 85px; */
+
   background-color: rgba(130, 179, 212, 10%);
 }
 
@@ -319,7 +332,6 @@ padding: 113px 85px;
   display: flex;
   justify-content: space-between;
   padding: 40px 70px 30px;
-  margin-bottom: 50px;
 }
 
 .footer-social {
@@ -401,6 +413,7 @@ justify-content: end;
 .wrap-sort .title-lead {
   margin-right: 200px;
   margin-bottom: 0;
+  flex-grow: 1;
 }
 
 .select-control {
@@ -439,6 +452,8 @@ justify-content: end;
   line-height: 20px;
   text-transform: uppercase;
 }
+
+
 
 .hotel-item {
   width: 340px;
