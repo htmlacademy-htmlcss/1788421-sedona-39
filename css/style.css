@@ -14,6 +14,23 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
+/*===================== сброс ===========================*/
+
+.nav-list,
+.nav-user {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-title,
+.title-lead,
+.subtitle,
+.title-topic,
+.phone-text
+ {
+  margin: 0;
+}
 
 /*===================== шрифты ===========================*/
 body {
@@ -38,6 +55,7 @@ body {
 
 .title-lead {
   /*  h2   */
+margin-bottom: 20px;
 
   font-size: 30px;
   line-height: 36px;
@@ -67,17 +85,7 @@ body {
   text-transform: uppercase;
   color: #000000;
 }
-/*
-.main-title,
-.title-lead,
-.subtitle,
-.title-topic,
-.phone-text,
-.nav-list,
-.qulaity-list,
-footer-social {
-  margin: 0;
-} */
+
 
 
 /*===================== общие стили ===========================*/
@@ -95,12 +103,12 @@ footer-social {
 }
 
 .container {
+  padding-top: 50px;
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
   box-shadow: 0 10px 15px #cdcccc;
 }
-
 /*===================== кнопки ===========================*/
 .button {
   font-family: "PT Sans", sans-serif;
@@ -140,22 +148,40 @@ footer-social {
   margin-right: 30px;
 }
 
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 340px;
+}
+
+.nav-user {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 88px;
+}
+
+.nav-wrapp {
+display: flex;
+}
+
 .nav-link {
+  display: block;
+padding: 20px 16px;
+
+min-width: 20px;
+min-height: 20px;
+
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   color: #000000;
   text-decoration: none;
-
 }
 
 .navigation {
   display: flex;
   justify-content: space-between;
-}
-
-.nav-list {
-  width: 340px;
+  gap: 285px;
 }
 
 .favorit-page {
@@ -177,11 +203,11 @@ footer-social {
   background-position: bottom, center;
 }
 
-/*
+
 .hero-img {
   display: block;
   margin: 51px auto 82px;
-} */
+}
 
 
 /*========= advantages & service ===========================*/
@@ -191,16 +217,16 @@ footer-social {
   text-align: center;
 }
 
-/*
-.advantages {
-  padding-top: 69px;
-}
 
 .service {
   padding-top: 64px;
 }
 
-*/
+.adv-wrapp {
+  padding: 69px 270px;
+  margin-bottom: 21px;
+}
+
 
 /* .qulaity-list {
   padding: 0;

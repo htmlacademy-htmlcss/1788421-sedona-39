@@ -6,13 +6,22 @@ body {
 
 }
 
+* {
+  outline: 1px solid black;
+
+}
+
+
 .main-header,
 .hero,
 .filters,
 .catalog
  {
   outline: 5px solid red;
+}
 
+.nav-link {
+  outline: 3px solid gold;
 }
 
 .navigation,
