@@ -7,7 +7,7 @@
     <title>HTML Academy: Седона</title>
 
     <link rel="stylesheet" href="./css/style.css">
-    <!-- <link rel="stylesheet" href="./css/outline.css"> -->
+    <link rel="stylesheet" href="./css/outline.css">
 
   </head>
 
@@ -25,17 +25,19 @@
           <li class="nav-item"><a class="nav-link" href="catalog.html">Гостиницы</a></li>
         </ul>
 
-        <ul class=" nav-list">
-          <li class="nav-item"><a class="nav-link" href="#search"><span class="visually-hidden">Поиск</span> </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link user-link-favorit" href="#">
-              <span class="visually-hidden">Избранное</span>
-              <span class="favorit-page">12</span>
-            </a>
-          </li>
-        </ul>
-        <button class="button button-color" type="button"> Хочу сюда</button> <!-- открывает модальное окно -->
+        <div class="nav-wrapp">
+          <ul class="nav-user ">
+            <li class="nav-item"><a class="nav-link" href="#search"><span class="visually-hidden">Поиск</span> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link user-link-favorit" href="#">
+                <span class="visually-hidden">Избранное</span>
+                <span class="favorit-page">12</span>
+              </a>
+            </li>
+          </ul>
+          <button class="button button-color" type="button"> Хочу сюда</button> <!-- открывает модальное окно -->
+        </div>
 
       </nav>
     </header>
@@ -47,10 +49,12 @@
       </section>
 
       <section class="advantages" data-test="advantages">
-        <h2 class="visually-hidden">Преимущества</h2>
+        <div class="adv-wrapp">
+          <h2 class="visually-hidden">Преимущества</h2>
         <p class="title-lead">Седона — небольшой городок в Аризоне,
           заслуживающий большего!</p>
         <p class="subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        </div>
 
         <ul class="qulaity-list">
           <li class="qulaity-item qulaity-item-wide">
