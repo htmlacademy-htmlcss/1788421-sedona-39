@@ -15,6 +15,26 @@
   font-display: swap;
 }
 
+/*===================== *** ===========================*/
+html {
+  height: 100%; /* нужно для стики-футера*/
+}
+
+body {
+  min-width: 1200px;
+  margin: 0;
+
+  min-height: 100%; /* нужно для стики-футера*/
+  display: flex; /* нужно для стики-футера*/
+
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+
+  background-color: #F2F2F2;
+}
+
 /*===================== сброс ===========================*/
 
 .nav-list,
@@ -38,23 +58,6 @@
 .text,
 .phone-text {
   margin: 0;
-}
-
-html {
-  height: 100%;
-}
-
-body {
-  min-width: 1200px;
-  min-height: 100%; /* нужно для стики-футера, но работает только height, min - не работает?*/
-  margin: 0;
-
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
-  color: #333333;
-
-  background-color: #F2F2F2;
 }
 
 /*===================== шрифты ===========================*/
@@ -129,9 +132,9 @@ body {
 .container {
   width: 1200px;
 
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  min-height: 100%; /* нужно для стики-футера*/
+  display: flex; /* нужно для стики-футера*/
+  flex-direction: column; /* нужно для стики-футера*/
 
   margin: 0 auto;
   background-color: #ffffff;
@@ -220,7 +223,7 @@ body {
 
 /*===================== hero ===========================*/
 .main-index  {
-  flex-grow: 1;
+  flex-grow: 1; /* нужно для стики-футера*/
 }
 
 
