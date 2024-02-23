@@ -14,6 +14,7 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
+
 /*===================== сброс ===========================*/
 
 .nav-list,
@@ -35,14 +36,17 @@
 .subtitle,
 .title-card,
 .text,
-.phone-text
- {
+.phone-text {
   margin: 0;
 }
 
-/*===================== шрифты ===========================*/
+html {
+  height: 100%;
+}
+
 body {
   min-width: 1200px;
+  min-height: 100%; /* нужно для стики-футера, но работает только height, min - не работает?*/
   margin: 0;
 
   font-family: "PT Sans", sans-serif;
@@ -52,6 +56,8 @@ body {
 
   background-color: #F2F2F2;
 }
+
+/*===================== шрифты ===========================*/
 
 .main-title {
   /*  h1   */
@@ -63,7 +69,7 @@ body {
 
 .title-lead {
   /*  h2   */
-margin-bottom: 20px;
+  margin-bottom: 20px;
 
   font-size: 30px;
   line-height: 36px;
@@ -96,6 +102,17 @@ margin-bottom: 20px;
   color: #000000;
 }
 
+
+.block {
+  display: block;
+}
+
+.button,
+.select-control {
+  font-family: inherit;
+}
+
+
 /*================= общие стили ===========================*/
 .visually-hidden {
   position: absolute;
@@ -112,14 +129,18 @@ margin-bottom: 20px;
 
 .container {
   width: 1200px;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
   margin: 0 auto;
   background-color: #ffffff;
   box-shadow: 0 10px 15px #cdcccc;
 }
+
 /*===================== кнопки ===========================*/
 .button {
-  font-family: "PT Sans", sans-serif;
-
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -168,15 +189,15 @@ margin-bottom: 20px;
 }
 
 .nav-wrapp {
-display: flex;
+  display: flex;
 }
 
 .nav-link {
   display: block;
-padding: 20px 16px;
+  padding: 20px 16px;
 
-min-width: 20px;
-min-height: 20px;
+  min-width: 20px;
+  min-height: 20px;
 
   font-size: 20px;
   line-height: 24px;
@@ -190,7 +211,7 @@ min-height: 20px;
   justify-content: space-between;
   gap: 285px;
 
-flex-grow: 1;
+  flex-grow: 1;
 }
 
 .favorit-page {
@@ -199,6 +220,10 @@ flex-grow: 1;
 }
 
 /*===================== hero ===========================*/
+.main-index  {
+  flex-grow: 1;
+}
+
 
 .hero {
   display: flex;
@@ -227,9 +252,8 @@ flex-grow: 1;
   text-align: center;
 }
 
-
 .adv-wrapp {
-  padding: 69px 270px;
+  padding: 69px 260px;
   margin-bottom: 21px;
 }
 
@@ -238,55 +262,56 @@ flex-grow: 1;
   flex-wrap: wrap;
 }
 
+.qulaity-list-wide .qulaity-item {
+  color: #ffffff;
+background-color: #83B3D3;
+}
+
 .qulaity-item {
+  box-sizing: border-box;
+  padding: 0 80px;
+
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 
   justify-content: center;
   align-items: center;
 
+  width: 400px;
   min-height: 385px;
 
-  padding: 0 80px;
-
-  box-sizing: border-box;
-  width: 400px;
-/* padding: 113px 85px; */
-
-  background-color: rgba(130, 179, 212, 10%);
-}
-
-
-.qulaity-item-wide {
-  width: 1200px;
-  display: flex;
+  background-color: rgba(130, 179, 212, 12%);
 }
 
 .qulaity-img {
   display: block;
 }
 
-.qulaity-item-20 {
-  background-color: rgba(130, 179, 212, 20%);
-
-}
-
-.qulaity-item-wide .title-card {
+.qulaity-list-wide .title-card {
   color: #ffffff;
 }
 
-.qulaity-item-wide {
-  color: #ffffff;
+.qulaity-list-wide {
+  width: 1200px;
+  display: flex;
+}
+
+.qulaity-list-wide .qulaity-item {
+    color: #ffffff;
   background-color: #83B3D3;
 }
 
-/*================== service ===========================*/
-.service {
-  padding-top: 64px;
+.advantages li.qulaity-item:nth-of-type(odd) {
+  background-color:rgba(130, 179, 212, 20%);
 }
 
+/*================== service ===========================*/
 .servise-wrapp {
   padding: 64px 340px;
+}
+.service li.qulaity-item:nth-of-type(even) {
+  background-color:#ffffff;
 }
 
 /*===================== search ===========================*/
@@ -305,7 +330,7 @@ flex-grow: 1;
 /*================ subscribe ===========================*/
 
 .subscribe {
-  padding: 96px 258px 104px;
+  padding: 96px 250px 104px;
 
   text-align: center;
 }
@@ -341,9 +366,9 @@ flex-grow: 1;
 
 .social-link {
   display: block;
-padding: 12px 13px;
-min-width: 24px;
-min-height: 17px;
+  padding: 12px 13px;
+  min-width: 24px;
+  min-height: 17px;
 }
 
 /*===================== CATALOG ===========================*/
@@ -380,7 +405,7 @@ min-height: 17px;
 }
 
 .filter-title {
-margin-bottom: 32px;
+  margin-bottom: 32px;
 
   font-size: 20px;
   line-height: 26px;
@@ -389,7 +414,7 @@ margin-bottom: 32px;
 
 .filter-group {
   border: none;
-padding: 0;
+  padding: 0;
 }
 
 .filter-list {
@@ -399,10 +424,10 @@ padding: 0;
 }
 
 .filter-wrapp {
-display: flex;
-flex-direction: column;
-gap: 32px;
-justify-content: end;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: end;
 }
 
 .wrap-sort {
@@ -417,7 +442,6 @@ justify-content: end;
 }
 
 .select-control {
-  font-family: "PT Sans", sans-serif;
   margin-right: 70px;
 }
 
@@ -453,12 +477,9 @@ justify-content: end;
   text-transform: uppercase;
 }
 
-
-
 .hotel-item {
   width: 340px;
 }
-
 
 .pagination {
   display: flex;
@@ -466,14 +487,20 @@ justify-content: end;
   padding: 40px 0 60px;
 }
 
-
 .pag-link {
-  display: block;
-  padding: 11px 24px;
+   box-sizing: border-box;
+   min-width: 60px;
+   min-height: 60px;
+
+   padding: 11px 11px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
 }
 
 .pag-disabled {
   color: #000000;
-background-color: #F2F2F2;
+  background-color: #F2F2F2;
 }
