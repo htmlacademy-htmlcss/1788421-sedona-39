@@ -17,15 +17,18 @@
 
 /*===================== *** ===========================*/
 html {
-  height: 100%; /* нужно для стики-футера*/
+  height: 100%;
+  /* нужно для стики-футера*/
 }
 
 body {
   min-width: 1200px;
   margin: 0;
 
-  min-height: 100%; /* нужно для стики-футера*/
-  display: flex; /* нужно для стики-футера*/
+  min-height: 100%;
+  /* нужно для стики-футера*/
+  display: flex;
+  /* нужно для стики-футера*/
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -56,7 +59,11 @@ body {
 .subtitle,
 .title-card,
 .text,
-.phone-text {
+.phone-text,
+.hotel-title,
+.hotel-price,
+.hotel-type,
+.rating-text {
   margin: 0;
 }
 
@@ -132,9 +139,12 @@ body {
 .container {
   width: 1200px;
 
-  min-height: 100%; /* нужно для стики-футера*/
-  display: flex; /* нужно для стики-футера*/
-  flex-direction: column; /* нужно для стики-футера*/
+  min-height: 100%;
+  /* нужно для стики-футера*/
+  display: flex;
+  /* нужно для стики-футера*/
+  flex-direction: column;
+  /* нужно для стики-футера*/
 
   margin: 0 auto;
   background-color: #ffffff;
@@ -223,8 +233,9 @@ body {
 
 /*===================== hero ===========================*/
 .main-index,
-.inner-main  {
-  flex-grow: 1; /* нужно для стики-футера*/
+.inner-main {
+  flex-grow: 1;
+  /* нужно для стики-футера*/
 }
 
 
@@ -267,7 +278,7 @@ body {
 
 .qulaity-list-wide .qulaity-item {
   color: #ffffff;
-background-color: #83B3D3;
+  background-color: #83B3D3;
 }
 
 .qulaity-item {
@@ -301,20 +312,21 @@ background-color: #83B3D3;
 }
 
 .qulaity-list-wide .qulaity-item {
-    color: #ffffff;
+  color: #ffffff;
   background-color: #83B3D3;
 }
 
 .advantages li.qulaity-item:nth-of-type(odd) {
-  background-color:rgba(130, 179, 212, 20%);
+  background-color: rgba(130, 179, 212, 20%);
 }
 
 /*================== service ===========================*/
 .servise-wrapp {
   padding: 64px 340px;
 }
+
 .service li.qulaity-item:nth-of-type(even) {
-  background-color:#ffffff;
+  background-color: #ffffff;
 }
 
 /*===================== search ===========================*/
@@ -461,6 +473,8 @@ background-color: #83B3D3;
 
 }
 
+/*===================== каталог ===========================*/
+
 .catalog {
   padding: 0 70px;
 }
@@ -474,24 +488,52 @@ background-color: #83B3D3;
   gap: 20px;
 }
 
+.hotel-item {
+  box-sizing: border-box;
+  /* width: 340px; */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 
-/* .hotel-item {
-  width: 340px;
-} */
+  border: 1px solid #E6E6E6;
+}
+
+.hotel-link {
+  text-decoration: none;
+}
+
+.card-wrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hotel-type,
+.btn-wrapp,
+.rating-wrap {
+  display: flex;
+  justify-content: space-between;
+}
 
 
+.hotel-img {
+  display: block;
+}
 
 .hotel-title {
   font-size: 20px;
   line-height: 28px;
   font-weight: 700;
   color: #000000;
+  margin: 16px 0;
 }
 
 .rating-text {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  background-color: #F2F2F2;
 }
 
 .pagination {
@@ -501,11 +543,11 @@ background-color: #83B3D3;
 }
 
 .pag-link {
-   box-sizing: border-box;
-   min-width: 60px;
-   min-height: 60px;
+  box-sizing: border-box;
+  min-width: 60px;
+  min-height: 60px;
 
-   padding: 11px 11px;
+  padding: 11px 11px;
 
   display: flex;
   justify-content: center;
