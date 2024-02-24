@@ -222,7 +222,8 @@ body {
 }
 
 /*===================== hero ===========================*/
-.main-index  {
+.main-index,
+.inner-main  {
   flex-grow: 1; /* нужно для стики-футера*/
 }
 
@@ -434,7 +435,7 @@ background-color: #83B3D3;
 
 .wrap-sort {
   display: flex;
-  padding: 50px 70px 40px;
+  padding: 50px 0 40px;
 }
 
 .wrap-sort .title-lead {
@@ -461,10 +462,24 @@ background-color: #83B3D3;
 }
 
 .catalog {
-  /* padding: 50px 70px 60px; */
   padding: 0 70px;
-
 }
+
+.hotels-list {
+  /* display: flex;
+  flex-wrap: wrap; */
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+/* .hotel-item {
+  width: 340px;
+} */
+
+
 
 .hotel-title {
   font-size: 20px;
@@ -477,10 +492,6 @@ background-color: #83B3D3;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-}
-
-.hotel-item {
-  width: 340px;
 }
 
 .pagination {
