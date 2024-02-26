@@ -7,7 +7,7 @@
     <title>Седона гостиницы</title>
 
     <link rel="stylesheet" href="./css/style.css">
-    <!-- <link rel="stylesheet" href="./css/outline.css"> -->
+    <link rel="stylesheet" href="./css/outline.css">
 
   </head>
 
@@ -15,7 +15,7 @@
     <div class="container">
       <header class="main-header" data-test="header">
         <a class="main-logo" href="index.html" aria-current="page">
-          <img src="img/logo.svg" width="138" height="64" alt="логотип Седоны">
+          <img src="img/logo.svg" width="140" height="70" alt="логотип Седоны">
         </a>
 
         <nav class="navigation">
@@ -33,7 +33,10 @@
 
           <div class="nav-wrapp">
             <ul class="nav-user ">
-              <li class="nav-item"><a class="nav-link" href="#search"><span class="visually-hidden">Поиск</span> </a>
+              <li class="nav-item">
+                <a class="nav-link" href="#search">
+                  <span class="visually-hidden">Поиск</span>
+                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link user-link-favorit" href="#">
@@ -123,14 +126,16 @@
               </ul>
             </fieldset>
 
-            <fieldset class="filter-group">
-              <legend class="filter-title">Стоимость, ₽:</legend>
-              я пока не знаю как это сделать (обещали разобрать в 8 разделе)
-            </fieldset>
-
             <div class="filter-wrapp">
-              <button class="button" type="submit">Применить</button>
-              <button class="button button-light" type="reset">Сбросить</button>
+              <fieldset class="filter-group">
+                <legend class="filter-title">Стоимость, ₽:</legend>
+               обещали разобрать в 8 разделе
+              </fieldset>
+
+              <div class="filter-btn-wrapp">
+                <button class="button" type="submit">Применить</button>
+                <button class="button button-light" type="reset">Сбросить</button>
+              </div>
             </div>
           </form>
         </section>
@@ -336,7 +341,7 @@
           <a class="phone-text" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
           <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-            <img src="img/htmlacademy_logo.svg" width="115" height="33" alt="логотип htmlacademy">
+            <img class="htmlacademy-link-img" src="img/htmlacademy_logo.svg" width="115" height="33" alt="логотип htmlacademy">
           </a>
         </div>
       </footer>

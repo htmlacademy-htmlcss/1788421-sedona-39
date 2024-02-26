@@ -184,19 +184,28 @@ body {
 }
 
 .main-logo {
+  position: relative;
   display: block;
   margin-right: 30px;
+  margin-bottom: -6px;
+}
+
+.main-logo-img {
+  display: block;
 }
 
 .nav-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 4px;
+
   min-width: 340px;
 }
 
 .nav-user {
   display: flex;
   flex-wrap: wrap;
+  gap: 4px;
   min-width: 88px;
 }
 
@@ -204,9 +213,13 @@ body {
   display: flex;
 }
 
+.nav-item {
+  flex-grow: 1;
+}
+
 .nav-link {
   display: block;
-  padding: 20px 16px;
+  padding: 20px 14px;
 
   min-width: 20px;
   min-height: 20px;
@@ -283,7 +296,7 @@ body {
 
 .qulaity-item {
   box-sizing: border-box;
-  padding: 0 80px;
+  padding: 81px 80px;
 
   display: flex;
   flex-direction: column;
@@ -309,11 +322,6 @@ body {
 .qulaity-list-wide {
   width: 1200px;
   display: flex;
-}
-
-.qulaity-list-wide .qulaity-item {
-  color: #ffffff;
-  background-color: #83B3D3;
 }
 
 .advantages li.qulaity-item:nth-of-type(odd) {
@@ -369,22 +377,36 @@ body {
 
 /*========+++++++++++++footer-footer =====================*/
 .footer-wrapp {
-  display: flex;
+  display: grid;
+  grid-template-columns: 150px 720px 115px;
+  gap: 40px;
+  text-align: center;
+
+  /* display: flex;
   justify-content: space-between;
-  padding: 40px 70px 30px;
+  align-items: center; */
+   padding: 40px 70px 30px;
 }
 
 .footer-social {
   display: flex;
   flex-wrap: wrap;
+  gap: 2px;
+  max-width: 150px;
 }
 
 .social-link {
   display: block;
-  padding: 12px 13px;
+  padding: 12px 12px;
   min-width: 24px;
   min-height: 17px;
 }
+
+.htmlacademy-link,
+.htmlacademy-link-img {
+  display: block;
+}
+
 
 /*===================== CATALOG ===========================*/
 .filters {
@@ -416,7 +438,7 @@ body {
 
 .catalog-filter {
   display: flex;
-  justify-content: space-between;
+  gap: 70px;
 }
 
 .filter-title {
@@ -439,6 +461,13 @@ body {
 }
 
 .filter-wrapp {
+  display: flex;
+  gap: 70px;
+
+  margin-left: 140px;
+}
+
+.filter-btn-wrapp {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -490,15 +519,14 @@ body {
 
 .hotel-item {
   box-sizing: border-box;
-  /* width: 340px; */
+  width: 340px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 
-  border: 1px solid #E6E6E6;
+  outline: 1px solid #E6E6E6; /* вместо бордера, чтобы паддинги остались 20*/
 }
-
 .hotel-link {
   text-decoration: none;
 }
