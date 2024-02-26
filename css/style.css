@@ -402,8 +402,9 @@ body {
 
   /*красный цвет и 44рх поставлены для наглядности
   - ??? - почему элементы выпадают из формы с закругленными краями?*/
-  border-radius: 44px;
-  border: 1px solid red;
+  border-radius: 4px;
+  overflow: hidden;
+
 }
 
 .input-mail {
