@@ -7,11 +7,11 @@
     <title>Седона гостиницы</title>
 
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/outline.css">
+    <!-- <link rel="stylesheet" href="./css/outline.css"> -->
 
   </head>
 
-  <body >
+  <body>
     <div class="container">
       <header class="main-header" data-test="header">
         <a class="main-logo" href="index.html" aria-current="page">
@@ -129,7 +129,7 @@
             <div class="filter-wrapp">
               <fieldset class="filter-group">
                 <legend class="filter-title">Стоимость, ₽:</legend>
-               обещали разобрать в 8 разделе
+                обещали разобрать в 8 разделе
               </fieldset>
 
               <div class="filter-btn-wrapp">
@@ -180,25 +180,20 @@
                 <h3 class="hotel-title">Amara Resort & Spa</h3>
               </a>
 
-              <div class="card-wrapp">
-                <p class="hotel-type">Гостиница
-                  <span class="hotel-price">От 4000 ₽</span>
-                </p>
+              <p class="hotel-type">Гостиница
+                <span class="hotel-price">От 4000 ₽</span>
+              </p>
 
-                <div class="btn-wrapp">
-                  <a class="button button-color button-link" href="">подробнее</a>
-                <button class="button" type="button">в избранное</button>
-                </div>
-                <!-- какое-то действие по добавлению в избранное -->
+              <a class="button button-color button-link btn-card" href="">подробнее</a>
+              <button class="button btn-card" type="button">в избранное</button>
+              <!-- какое-то действие по добавлению в избранное -->
 
-                <div class="rating-wrap">
-                  <div class="star star-4" role="img" aria-label="4 звезды">
-                    <span class="visually-hidden">4 звезды</span>
-                  </div>
-                  <p class="rating-text">Рейтинг: 8,5</p>
+              <div class="rating-wrap">
+                <div class="star star-4" role="img" aria-label="4 звезды">
+                  <span class="visually-hidden">4 звезды</span>
                 </div>
+                <p class="rating-text btn-card">Рейтинг: 8,5</p>
               </div>
-
             </li>
 
             <li class="hotel-item">
@@ -208,22 +203,19 @@
                 <h3 class="hotel-title">Villas at Poco Diablo</h3>
               </a>
 
-              <div class="card-wrapp">
               <p class="hotel-type">Гостиница
                 <span class="hotel-price">От 5000 ₽</span>
               </p>
-              <div class="btn-wrapp">
-              <a class="button button-color button-link" href="">подробнее</a>
-              <button class="button button-select" type="button button-color">в избранном</button>
-              </div>
+
+              <a class="button button-color button-link btn-card" href="">подробнее</a>
+              <button class="button button-select btn-card" type="button button-color">в избранном</button>
               <!--какое-то действие c избранным, просмотв или удаление из избр.-->
 
               <div class="rating-wrap">
                 <div class="star star-4" role="img" aria-label="4 звезды">
                   <span class="visually-hidden">4 звезды</span>
                 </div>
-                <p class="rating-text">Рейтинг: 9,2</p>
-              </div>
+                <p class="rating-text btn-card">Рейтинг: 9,2</p>
               </div>
             </li>
 
@@ -233,22 +225,18 @@
                 <h3 class="hotel-title">Desert Quail Inn</h3>
               </a>
 
-              <div class="card-wrapp">
               <p class="hotel-type">Гостиница
                 <span class="hotel-price">От 2500 ₽</span>
               </p>
 
-              <div class="btn-wrapp">
-              <a class="button button-color button-link" href="">подробнее</a>
-              <button class="button" type="button">в избранное</button>
-              </div>
+              <a class="button button-color button-link btn-card" href="">подробнее</a>
+              <button class="button btn-card" type="button">в избранное</button>
 
               <div class="rating-wrap">
                 <div class="star star-3" role="img" aria-label="3 звезды">
                   <span class="visually-hidden">3 звезды</span>
                 </div>
-                <p class="rating-text">Рейтинг: 6,9</p>
-              </div>
+                <p class="rating-text btn-card">Рейтинг: 6,9</p>
               </div>
             </li>
 
@@ -258,22 +246,18 @@
                 <h3 class="hotel-title">GreenTree Inn</h3>
               </a>
 
-              <div class="card-wrapp">
               <p class="hotel-type">Гостиница
                 <span class="hotel-price">От 1500 ₽</span>
               </p>
 
-              <div class="btn-wrapp">
-              <a class="button button-color button-link" href="">подробнее</a>
-              <button class="button" type="button">в избранное</button>
-              </div>
+              <a class="button button-color button-link btn-card" href="">подробнее</a>
+              <button class="button btn-card" type="button">в избранное</button>
 
               <div class="rating-wrap">
                 <div class="star star-2" role="img" aria-label="2 звезды">
                   <span class="visually-hidden">2 звезды</span>
                 </div>
-                <p class="rating-text">Рейтинг: 5,0</p>
-              </div>
+                <p class="rating-text btn-card">Рейтинг: 5,0</p>
               </div>
             </li>
           </ul>
@@ -307,15 +291,16 @@
       <footer class="main-footer" data-test="footer">
         <div class="subscribe" data-test="subscribe">
           <h2 class="title-lead">Подпишитесь на рассылку</h2>
-          <p class="subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p class="subtitle"><span class="block">Только полезная информация и никакого спама, </span> честное бойскаутское!</p>
 
 
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe-email">Email</label>
-            <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email"
+            <input class="input-mail input-mail-inner" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email"
               required>
             <button class="button" type="submit">Подписаться</button>
           </form>
+
         </div>
         <div class="footer-wrapp">
           <ul class="footer-social">
@@ -341,7 +326,8 @@
           <a class="phone-text" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
           <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-            <img class="htmlacademy-link-img" src="img/htmlacademy_logo.svg" width="115" height="33" alt="логотип htmlacademy">
+            <img class="htmlacademy-link-img" src="img/htmlacademy_logo.svg" width="115" height="33"
+              alt="логотип htmlacademy">
           </a>
         </div>
       </footer>
