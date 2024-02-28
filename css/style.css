@@ -241,6 +241,27 @@ align-items: center;
   text-decoration: none;
 }
 
+.user-icon-serch {
+  background-image: url(../img/icons/search.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.user-icon-favorit {
+  position: relative;
+  background-image: url(../img/icons/favourites.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.favorit-page {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -311,6 +332,7 @@ width: 100%;
 }
 
 .qulaity-item {
+  position: relative;
   box-sizing: border-box;
   padding: 81px 80px;
 
@@ -325,6 +347,24 @@ width: 100%;
   min-height: 385px;
 
   background-color: rgba(130, 179, 212, 12%);
+}
+
+.qulaity-item::after {
+  position: absolute;
+}
+
+.advantages .qulaity-list-wide > .qulaity-item::after,
+.advantages .qulaity-item::after {
+  /* top: 10px;
+  left: 10px; */
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: rgb(255, 255, 255, 0.3);
+}
+
+.advantages .qulaity-item::after  {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .qulaity-img {
@@ -343,7 +383,6 @@ width: 100%;
 .advantages li.qulaity-item:nth-of-type(odd) {
   background-color: rgba(130, 179, 212, 20%);
 }
-
 /*================== service ===========================*/
 .servise-wrapp {
   padding: 64px 340px;
@@ -351,6 +390,26 @@ width: 100%;
 
 .service li.qulaity-item:nth-of-type(even) {
   background-color: #ffffff;
+}
+
+.qulaity-item-icon {
+  background-repeat: no-repeat;
+  background-position: center 81px ;
+}
+
+.icon-home{
+  background-image: url(../img/offer/offer_home.svg)
+}
+
+.icon-food {
+  background-image: url(../img/offer/offer_food.svg)
+}
+.icon-present {
+  background-image: url(../img/offer/offer_present.svg)
+}
+
+.service .title-card {
+  margin-top: 102px;
 }
 
 /*===================== search ===========================*/
@@ -374,7 +433,7 @@ width: 100%;
 }
 
 .search .button {
-  display: block;
+  display: inline-block;
 }
 /*================ subscribe ===========================*/
 
@@ -408,11 +467,8 @@ width: 100%;
   justify-content: center;
   gap:10px 0;
 
-  /*красный цвет и 44рх поставлены для наглядности
-  - ??? - почему элементы выпадают из формы с закругленными краями?*/
   border-radius: 4px;
   overflow: hidden;
-
 }
 
 .input-mail {
@@ -458,6 +514,7 @@ margin-bottom: 100px;
   max-width: 150px;
 }
 
+
 .social-link {
   display: block;
   padding: 12px 12px;
@@ -465,7 +522,12 @@ margin-bottom: 100px;
   min-height: 17px;
 }
 
-.htmlacademy-link,
+.htmlacademy-link {
+  display: flex;
+  align-items: center;
+}
+
+
 .htmlacademy-link-img {
   display: block;
 }
@@ -498,6 +560,24 @@ margin-bottom: 100px;
   color: #ffffff;
   text-decoration: none;
 }
+
+.breadcrumbs-item:not(:first-child) {
+  padding-left: 28px;
+  position: relative;
+}
+
+.breadcrumbs-item:not(:first-child)::before {
+content: "";
+position: absolute;
+width: 7px;
+  height: 10px;
+
+top: 7px;
+left: 5px;
+background-image: url(../img/icons/arrow_right.svg);
+  background-repeat: no-repeat;
+}
+
 
 .catalog-filter {
   display: flex;
@@ -571,9 +651,20 @@ color: #333333;
 }
 
 .card-button {
-  padding: 17px 16px;
-  min-width: 16px;
-  min-height: 14px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+
+}
+
+.card-selected {
+
+  border-color: #000000;
 
 }
 
