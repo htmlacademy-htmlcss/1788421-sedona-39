@@ -299,19 +299,43 @@ body {
   background-color: #756257;
 }
 
-.user-icon-serch {
-  background-image: url(../img/icons/search.svg);
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
+.user-icon-serch,
+.user-icon-favorit {
+  width: 20px;
+  height: 20px;
+  position: relative;
 }
 
-.user-icon-favorit {
-  position: relative;
-  background-image: url(../img/icons/favourites.svg);
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
+.user-icon-serch::before,
+.user-icon-favorit::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  background-color: #000000;
+
+  mask-repeat: no-repeat;
+  mask-size: 20px 20px;
+  mask-position: center;
+}
+
+.user-icon-serch::before {
+  mask-image: url(../img/icons/search.svg);
+}
+
+.user-icon-favorit::before {
+  mask-image: url(../img/icons/favourites.svg);
+}
+
+.user-icon-serch:hover::before,
+.user-icon-favorit:hover::before {
+  background-color: #756157;
+}
+
+.user-icon-serch:active::before,
+.user-icon-favorit:active::before {
+  background-color: rgb(117, 97, 87, 0.3);
 }
 
 .favorit-page {
@@ -346,7 +370,6 @@ body {
   /* нужно для стики-футера*/
 }
 
-
 .hero {
   display: flex;
 
@@ -360,7 +383,6 @@ body {
   background-repeat: no-repeat;
   background-position: bottom, center;
 }
-
 
 .hero-img {
   display: block;
@@ -560,8 +582,8 @@ body {
   /* display: grid;
   grid-template-columns: 150px 335px 115px; */
 
-    display: flex;
-    gap: 40px;
+  display: flex;
+  gap: 40px;
 
   text-align: center;
   align-items: center;
@@ -585,44 +607,79 @@ body {
   display: block;
   padding: 12px 12px;
   min-width: 24px;
-  min-height: 17px;
+  min-height: 14px;
 }
 
-.social-link-svg {
-  fill: red;
+.social-link::before {
+  content: "";
+  display: block;
+
+  min-width: 24px;
+  min-height: 14px;
+  background-color: #82B3D3;
+
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 
-.social-link {
-  outline: 1px solid black;
+.social-link-vk::before {
+  content: "";
+
+  mask-image: url(../img/icons/social_vk.svg);
+  mask-size: 24px 14px;
 }
 
-.social-link-svg:hover {
-  fill: green;
+
+.social-link-tg::before {
+  content: "";
+
+  mask-image: url(../img/icons/social_tel.svg);
+  mask-size: 18px 16px;
 }
 
-.social-link-svg :active {
-  fill: rgba(104, 162, 202, 0.3);
+.social-link-you::before {
+  content: "";
+
+  mask-image: url(../img/icons/social_you.svg);
+  mask-size: 22px 17px;
 }
 
-/* 83B3D3 */
+.social-link:hover:before {
+  background-color: #68A2CA;
+}
+
+.social-link:active:before {
+  background-color: rgba(104, 162, 202, 0.3);
+}
 
 .htmlacademy-link {
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  width: 115px;
+  height: 33px;
 }
 
-.htmlacademy-link-svg {
-  fill: #000000;
+.htmlacademy-link::before {
+  content: "";
+  display: inline-block;
+  width: 115px;
+  height: 33px;
+
+  background-color: #000000;
+
+  mask-image: url(../img/htmlacademy_logo.svg);
+  mask-repeat: no-repeat;
+  mask-size: 115px 33px;
+  mask-position: center;
 }
 
-.htmlacademy-link-svg:hover {
-  fill: #756157;
+.htmlacademy-link:hover::before {
+  background-color: #756157;
 }
 
-.htmlacademy-link-svg:active {
-  fill: rgb(117, 97, 87, 0.3);
+.htmlacademy-link:active::before {
+  background-color: rgb(117, 97, 87, 0.3);
+  ;
 }
-
 
 /*===================== CATALOG ===========================*/
 .filters {
@@ -802,7 +859,7 @@ body {
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px 17px;
+  gap: 20px 20px;
   /* из-за бордера в карточках появилось 6 лишних пикселей - (20+20 -6)/2 = 17*/
 
   padding-bottom: 39px;
@@ -812,21 +869,21 @@ body {
 .hotel-item {
   box-sizing: border-box;
   /* width: 340px; */
-  padding: 20px;
+  padding:20px 19px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* flex-direction: column; */
+  align-items: center;
   gap: 16px;
 
   border: 1px solid #E6E6E6;
-  /* можно ли аутлайн вместо бордера, чтобы паддинги остались 20*/
 
   border-radius: 4px;
 }
 
 .hotel-link {
   text-decoration: none;
+  display: block;
 }
 
 .btn-card {
@@ -852,12 +909,12 @@ body {
 }
 
 .hotel-img:hover {
-opacity: 0.7;
+  opacity: 0.7;
 }
 
 .hotel-img:active {
   opacity: 0.3;
-  }
+}
 
 .hotel-title {
   font-size: 20px;
@@ -897,7 +954,7 @@ opacity: 0.7;
 }
 
 .star-4::before {
-display: block;
+  display: block;
   width: 72px;
 }
 
