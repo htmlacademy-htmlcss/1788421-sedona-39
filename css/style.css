@@ -166,12 +166,12 @@ body {
   border: none;
 }
 
-.button:hover {
+.button:not(:disabled):hover {
   cursor: pointer;
   background-color: #68A2CA;
 }
 
-.button:active {
+.button:not(:disabled):active {
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -183,7 +183,7 @@ body {
   background-color: #756157;
 }
 
-.button-color:hover {
+.button-color:not(:disabled):hover {
   background-color: #615048;
 }
 
@@ -191,7 +191,7 @@ body {
   background-color: #7DB54F;
 }
 
-.button-select:hover {
+.button-select:not(:disabled):hover {
   background-color: #6C9E42;
 }
 
@@ -199,11 +199,11 @@ body {
   background-color: transparent;
 }
 
-.button-light:hover {
+.button-light:not(:disabled):hover {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.button-light:active {
+.button-light:not(:disabled):active {
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -270,15 +270,15 @@ body {
   text-decoration: none;
 }
 
-.nav-link:hover,
-.phone-text:hover,
-.hotel-title:hover {
+.nav-link:not(:disabled):hover,
+.phone-text:not(:disabled):hover,
+.hotel-title:not(:disabled):hover {
   color: #756157;
 }
 
-.nav-link:active,
-.phone-text:active,
-.hotel-title:active {
+.nav-link:not(:disabled):active,
+.phone-text:not(:disabled):active,
+.hotel-title:not(:disabled):active {
   color: rgb(117, 97, 87, 0.3);
 }
 
@@ -328,13 +328,13 @@ body {
   mask-image: url(../img/icons/favourites.svg);
 }
 
-.user-icon-serch:hover::before,
-.user-icon-favorit:hover::before {
+.user-icon-serch:not(:disabled):hover::before,
+.user-icon-favorit:not(:disabled):hover::before {
   background-color: #756157;
 }
 
-.user-icon-serch:active::before,
-.user-icon-favorit:active::before {
+.user-icon-serch:not(:disabled):active::before,
+.user-icon-favorit:not(:disabled):active::before {
   background-color: rgb(117, 97, 87, 0.3);
 }
 
@@ -574,9 +574,9 @@ body {
 }
 
 /*========+++++++++++++footer-footer =====================*/
-.main-footer {
+/* .main-footer {
   margin-bottom: 100px;
-}
+} */
 
 .footer-wrapp {
   /* display: grid;
@@ -617,6 +617,7 @@ body {
   min-width: 24px;
   min-height: 14px;
   background-color: #82B3D3;
+  /* background-color: red; */
 
   mask-repeat: no-repeat;
   mask-position: center;
@@ -624,6 +625,8 @@ body {
 
 .social-link-vk::before {
   content: "";
+  width: 24px;
+  height: 14px;
 
   mask-image: url(../img/icons/social_vk.svg);
   mask-size: 24px 14px;
@@ -632,23 +635,27 @@ body {
 
 .social-link-tg::before {
   content: "";
-
+  width: 18px;
+  height: 16px;
   mask-image: url(../img/icons/social_tel.svg);
   mask-size: 18px 16px;
 }
 
 .social-link-you::before {
   content: "";
-
+  width: 22px;
+  height: 17px;
   mask-image: url(../img/icons/social_you.svg);
   mask-size: 22px 17px;
 }
 
-.social-link:hover:before {
+.social-link:not(:disabled):hover::before {
   background-color: #68A2CA;
+  /* background-color: green; */
+
 }
 
-.social-link:active:before {
+.social-link:not(:disabled):active::before {
   background-color: rgba(104, 162, 202, 0.3);
 }
 
@@ -672,11 +679,11 @@ body {
   mask-position: center;
 }
 
-.htmlacademy-link:hover::before {
+.htmlacademy-link:not(:disabled):hover::before {
   background-color: #756157;
 }
 
-.htmlacademy-link:active::before {
+.htmlacademy-link:not(:disabled):active::before {
   background-color: rgb(117, 97, 87, 0.3);
   ;
 }
@@ -835,11 +842,11 @@ body {
   background-image: url("../img/icons/view-icon_3.svg");
 }
 
-.card-button:hover {
+.card-button:not(:disabled):hover {
   border: 2px solid #000000;
 }
 
-.card-button:active {
+.card-button:not(:disabled):active {
   border: 2px solid #68A2CA;
 }
 
@@ -869,7 +876,7 @@ body {
 .hotel-item {
   box-sizing: border-box;
   /* width: 340px; */
-  padding:20px 19px;
+  padding: 20px 19px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -908,11 +915,11 @@ body {
   margin-bottom: 16px;
 }
 
-.hotel-img:hover {
+.hotel-img:not(:disabled):hover {
   opacity: 0.7;
 }
 
-.hotel-img:active {
+.hotel-img:not(:disabled):active {
   opacity: 0.3;
 }
 
