@@ -478,6 +478,11 @@ body {
   padding: 64px 340px;
 }
 
+.service .title-card {
+  margin-top: 102px;
+  margin-bottom: 30px;
+}
+
 .service li.qulaity-item:nth-of-type(even) {
   background-color: #ffffff;
 }
@@ -497,10 +502,6 @@ body {
 
 .icon-present {
   background-image: url(../img/offer/offer_present.svg)
-}
-
-.service .title-card {
-  margin-top: 102px;
 }
 
 /*===================== search ===========================*/
@@ -575,7 +576,6 @@ body {
 }
 
 .subscribe-form .button {
-
   flex-grow: 1;
   font-size: 20px;
   line-height: 36px;
@@ -583,9 +583,6 @@ body {
 }
 
 /*========+++++++++++++footer-footer =====================*/
-/* .main-footer {
-  margin-bottom: 100px;
-} */
 
 .footer-wrapp {
   /* display: grid;
@@ -622,7 +619,6 @@ align-items: center;
   padding: 5px 5px;
   width: 48px;
   height: 40px;
-
 }
 
 .social-link::before {
@@ -632,7 +628,6 @@ align-items: center;
   min-width: 24px;
   min-height: 14px;
   background-color: #82B3D3;
-  /* background-color: red; */
 
   mask-repeat: no-repeat;
   mask-position: center;
@@ -666,8 +661,6 @@ align-items: center;
 
 .social-link:not(:disabled):hover::before {
   background-color: #68A2CA;
-  /* background-color: green; */
-
 }
 
 .social-link:not(:disabled):active::before {
