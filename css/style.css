@@ -117,7 +117,8 @@ body {
 }
 
 .button,
-.select-control {
+.select-control,
+.card-button {
   font-family: inherit;
 }
 
@@ -371,9 +372,7 @@ body {
 }
 
 .hero {
-  display: flex;
-
-  padding: 0 70px;
+  padding:51px  70px 82px;
 
   color: #ffffff;
   background-color: #467AA9;
@@ -386,7 +385,7 @@ body {
 
 .hero-img {
   display: block;
-  margin: 51px auto 82px;
+  margin:  0 auto ;
 }
 
 /*==================== advantages  =======================*/
@@ -412,7 +411,7 @@ body {
 }
 
 .qulaity-item {
-  position: relative;
+
   box-sizing: border-box;
   padding: 81px 80px;
 
@@ -429,21 +428,31 @@ body {
   background-color: rgba(130, 179, 212, 12%);
 }
 
-.qulaity-item::after {
+.advantages .title-card {
+  position: relative;
+}
+
+.title-card::after {
   position: absolute;
 }
 
-.advantages .qulaity-list-wide > .qulaity-item::after,
-.advantages .qulaity-item::after {
-  /* top: 10px;
-  left: 10px; */
+.advantages .qulaity-list-wide > .title-card::after,
+.advantages .title-card::after {
+
+  top: 86px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* bottom: 30px;
+  left: 58px; */
+
   content: "";
   width: 60px;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.advantages .qulaity-item::after {
+.advantages .title-card::after {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -604,10 +613,17 @@ body {
 
 
 .social-link {
-  display: block;
-  padding: 12px 12px;
-  min-width: 24px;
-  min-height: 14px;
+  box-sizing: border-box;
+
+  display: flex;
+justify-content: center;
+align-items: center;
+
+  padding: 5px 5px;
+  width: 48px;
+  height: 40px;
+
+  outline: 1px solid black;
 }
 
 .social-link::before {
@@ -745,6 +761,7 @@ body {
 }
 
 .filter-title {
+  padding: 0;
   margin-bottom: 32px;
 
   font-size: 20px;
@@ -816,6 +833,8 @@ body {
 }
 
 .card-button {
+  padding: 0;
+
   width: 44px;
   height: 44px;
   display: flex;
