@@ -623,7 +623,6 @@ align-items: center;
   width: 48px;
   height: 40px;
 
-  outline: 1px solid black;
 }
 
 .social-link::before {
