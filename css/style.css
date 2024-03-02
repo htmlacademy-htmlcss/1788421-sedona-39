@@ -449,11 +449,14 @@ body {
   content: "";
   width: 60px;
   height: 2px;
-  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .advantages .title-card::after {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.qulaity-list-wide .title-card::after {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .qulaity-img {
