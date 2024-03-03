@@ -969,26 +969,21 @@ align-items: center;
   height: 37px;
 
   background-image: url("../img/icons/star.svg");
-  background-repeat: repeat-x;
+  background-repeat: space no-repeat;
   background-position: 0 center;
 
 }
 
 .star-4::before {
-  display: block;
-  width: 72px;
+  width: 89px;
 }
 
 .star-3::before {
-  display: block;
-
-  width: 54px;
+  width: 66px;
 }
 
 .star-2::before {
-  display: block;
-
-  width: 36px;
+  width: 42px;
 }
 
 .pagination {
