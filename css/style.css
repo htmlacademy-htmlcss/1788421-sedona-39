@@ -938,6 +938,19 @@ border-radius: 50%;
 background-color: #3F5E72;
 }
 
+.control:hover .control-mark {
+opacity: 0.6;
+}
+
+control:active .control-mark {
+  opacity: 0.3;
+
+  background-color: red;
+
+  }
+
+
+
 
 /* +++++++++++++ КАТАЛОГ  select +++++++++++++++++++*/
 
