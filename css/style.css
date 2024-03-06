@@ -118,7 +118,8 @@ body {
 
 .button,
 .select-control,
-.card-button {
+.card-button,
+.field {
   font-family: inherit;
 }
 
@@ -212,6 +213,10 @@ body {
   text-decoration: none;
 }
 
+.button-big {
+  padding-left: 50px;
+  padding-right: 50px;
+}
 /*===================== heder ===========================*/
 .main-header {
   display: flex;
@@ -567,15 +572,22 @@ body {
   overflow: hidden;
 }
 
-.input-mail {
+.field {
   box-sizing: border-box;
-  min-width: 452px;
-  display: inline;
-
   padding: 14px 20px;
   font-size: 18px;
   line-height: 24px;
   border: none;
+}
+
+.field::placeholder {
+color: rgba(0, 0, 0, 0.6);
+}
+
+.input-mail {
+  box-sizing: border-box;
+  min-width: 452px;
+  display: inline;
 }
 
 .subscribe-form .button {
@@ -716,7 +728,6 @@ align-items: center;
 
 .filter-group {
   margin: 0;
-
 }
 
 .breadcrumbs {
@@ -785,7 +796,7 @@ align-items: center;
 .filter-btn-wrapp {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 27px;
   justify-content: end;
 }
 
@@ -800,6 +811,136 @@ align-items: center;
   margin-bottom: 0;
   flex-grow: 1;
 }
+
+/* +++++++++++++ КАТАЛОГ  range +++++++++++++++++++*/
+
+.range-wrapp-field {
+display: flex;
+gap: 2px;
+margin-bottom: 36px;
+}
+
+.min-price,
+.max-price {
+  width: 143px;
+  appearance: textfield;
+}
+
+.min-price {
+border-radius: 5px 0 0 5px;
+}
+
+.max-price {
+  border-radius: 0 5px 5px 0;
+  }
+
+  .min-price::placeholder,
+  .max-price::placeholder {
+    text-align: end;
+  }
+
+.range-scale {
+  position: relative;
+
+  width: 287px;
+  height: 4px;
+
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+position: absolute;
+left: 19px;
+width: 226px;
+
+height: 4px;
+background-color: #ffffff;
+}
+
+.range-toggle  {
+  display: block;
+  position: absolute;
+
+
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: none;
+}
+
+.toggle-min {
+  top: -8px ;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px ;
+  right: -10px;
+}
+
+.button-big:first-child {
+margin-top: auto;
+}
+
+.filter-group,
+.filter-btn-wrapp {
+  outline: 1px solid black;
+}
+/* +++++++++++++ КАТАЛОГ  checkbox & radio +++++++++++*/
+
+.control {
+  position: relative;
+  padding-left: 36px;
+}
+
+.control-mark {
+position: absolute;
+top: 2px;
+left: 0;
+
+width: 20px;
+height: 20px;
+background-color: #ffffff;
+border-radius: 4px;
+}
+
+.control-label {
+  line-height: 23px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  display: block;
+  content: "";
+
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/icons/check.svg");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::after {
+  position: absolute;
+  content: "";
+top: 50%;
+left: 50%;
+
+transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+border-radius: 50%;
+background-color: #3F5E72;
+}
+
+
+/* +++++++++++++ КАТАЛОГ  select +++++++++++++++++++*/
+
 
 .select-control {
   appearance: none;
