@@ -98,7 +98,8 @@ body {
 .button,
 .select-control,
 .card-button,
-.field {
+.field,
+.form-label {
   font-family: inherit;
 }
 
@@ -316,10 +317,14 @@ body {
 
 .user-icon-serch::before {
   -webkit-mask-image: url(../img/icons/search.svg);
+  mask-image: url(../img/icons/search.svg);
+
 }
 
 .user-icon-favorit::before {
   -webkit-mask-image: url(../img/icons/favourites.svg);
+  mask-image: url(../img/icons/favourites.svg);
+
 }
 
 .user-icon-serch:not(:disabled):hover::before,
@@ -553,9 +558,13 @@ body {
 .field {
   box-sizing: border-box;
   padding: 14px 20px;
+
   font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
   border: none;
+
+  background-color: #F2F2F2;
 }
 
 .field::placeholder {
@@ -563,7 +572,6 @@ body {
 }
 
 .input-mail {
-  box-sizing: border-box;
   min-width: 452px;
   display: inline;
 }
@@ -590,7 +598,7 @@ body {
 }
 
 .phone-text {
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .footer-social {
@@ -603,7 +611,6 @@ body {
   gap: 2px;
   max-width: 150px;
 }
-
 
 .social-link {
   position: relative;
@@ -687,12 +694,7 @@ body {
   margin-bottom: 8px;
 }
 
-.filter-group {
-  margin: 0;
-}
-
 /*===================== CATALOG  breadcrumbs ==============*/
-
 
 .breadcrumbs {
   margin: 0;
@@ -718,7 +720,7 @@ body {
 
 .breadcrumbs-item {
   display: flex;
-align-items: center;
+  align-items: center;
 }
 
 
@@ -729,7 +731,7 @@ align-items: center;
   height: 10px;
   padding-right: 10px;
 
-    background-image: url(../img/icons/arrow_right.svg);
+  background-image: url(../img/icons/arrow_right.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -755,6 +757,7 @@ align-items: center;
 }
 
 .filter-group {
+  margin: 0;
   border: none;
   padding: 0;
 }
@@ -866,10 +869,10 @@ align-items: center;
   margin-top: auto;
 }
 
-.filter-group,
+/* .filter-group,
 .filter-btn-wrapp {
   outline: 1px solid black;
-}
+} */
 
 /* +++++++++++++ КАТАЛОГ  checkbox & radio +++++++++++*/
 
@@ -928,13 +931,7 @@ align-items: center;
 
 .control:active .control-mark {
   opacity: 0.3;
-
-  background-color: red;
-
 }
-
-
-
 
 /* +++++++++++++ КАТАЛОГ  select +++++++++++++++++++*/
 
@@ -943,7 +940,7 @@ align-items: center;
   box-sizing: border-box;
   min-width: 292px;
   max-height: 48px;
-  padding:  8px 38px 8px 20px;
+  padding: 8px 38px 8px 20px;
 
   font-size: 18px;
   line-height: 21px;
@@ -1020,13 +1017,13 @@ align-items: center;
   padding: 0;
   list-style: none;
 
-  /* display: flex;
+  /* карточки на флексах
+    display: flex;
   flex-wrap: wrap; */
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px 20px;
-  /* из-за бордера в карточках появилось 6 лишних пикселей - (20+20 -6)/2 = 17*/
 
   padding-bottom: 39px;
   border-bottom: 1px solid #E6E6E6;
@@ -1043,7 +1040,6 @@ align-items: center;
   gap: 16px;
 
   border: 1px solid #E6E6E6;
-
   border-radius: 4px;
 }
 
@@ -1053,11 +1049,12 @@ align-items: center;
 }
 
 .btn-card {
+  width: 140px;
+
   text-align: center;
   box-sizing: border-box;
   padding-left: 18px;
   padding-right: 18px;
-  width: 140px;
 }
 
 .hotel-type {
@@ -1066,10 +1063,11 @@ align-items: center;
 
 .hotel-type,
 .rating-wrap {
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
 }
 
 
@@ -1087,7 +1085,7 @@ align-items: center;
 }
 
 .hotel-title {
-margin: 0;
+  margin: 0;
 
   font-size: 20px;
   line-height: 28px;
@@ -1124,7 +1122,6 @@ margin: 0;
   background-image: url("../img/icons/star.svg");
   background-repeat: space no-repeat;
   background-position: 0 center;
-
 }
 
 .star-4::before {
@@ -1141,7 +1138,7 @@ margin: 0;
 
 .pagination {
   margin: 0;
-   list-style: none;
+  list-style: none;
 
   display: flex;
   gap: 8px;
@@ -1166,6 +1163,166 @@ margin: 0;
   background-color: #F2F2F2;
 }
 
-.input-mail-inner {
+/*===================== Модальное окно ===========================*/
+
+.modal-container {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-container-close {
+    display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.modal-search {
+  box-sizing: border-box;
+  width: 717px;
+}
+
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  background-color: #F2F2F2;
+  border-radius: 50%;
+  border: none;
+  background-image: url("../img/icons/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin-bottom: 64px;
+}
+
+
+/*===================== Модальное окно ФОРМА ===========================*/
+.search-form label,
+.search-form input,
+.search-form p {
+  outline: 1px solid blue;
+}
+
+.form-label {
+  line-height: 24px;
+  font-weight: 700;
+
+  padding: 12px 0;
+  align-self: center;
+}
+
+.search-form-field {
+  border-radius: 4px;
+
+  appearance: textfield;
+}
+
+.search-form {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 119px 110px 60px 119px 110px;
+
+  grid-template-areas: "label-in filed-in filed-in filed-in filed-in"
+    "label-out filed-out  filed-out filed-out filed-out"
+    "label-audlts field-audlts . label-children field-children"
+    "search-btn search-btn search-btn search-btn search-btn";
+
+  gap: 48px 20px;
+}
+
+.label-data-in {
+  grid-area: label-in;
+}
+
+.filed-in {
+  grid-area: filed-in;
+}
+
+.label-data-out {
+  grid-area: label-out;
+}
+
+.filed-out {
+  grid-area: filed-out;
+}
+
+.label-audlts {
+  grid-area: label-audlts;
+}
+
+.counter-wrapp-audlts {
+  grid-area: field-audlts;
+}
+
+.label-children {
+  grid-area: label-children;
+}
+
+.counter-wrapp-children {
+  grid-area: field-children;
+}
+
+.search-form-button {
+  grid-area: search-btn;
+
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+/*===================== Модальное окно ФОРМА counter (счетчик)===========================*/
+
+.counter-wrapp {
+  display: flex;
+  margin: 0;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+}
+
+.field-audlts,
+.field-children {
+ min-width: 31px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  text-align: center;
+
+  flex-shrink: 3;
+}
+
+.btn-counter {
+  appearance: none;
+  box-sizing: border-box;
+
+  flex-shrink: 1;
+
+
+  width: 40px;
+  padding: 14px 10px;
+  text-align: center;
+
+  font-size: 28px;
+  line-height: 28px;
+  color: rgba(117, 97, 87, 0.3);
+  border: none;
   background-color: #F2F2F2;
 }
