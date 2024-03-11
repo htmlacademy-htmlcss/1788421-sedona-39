@@ -38,6 +38,12 @@ body {
   background-color: #F2F2F2;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 /*===================== шрифты ===========================*/
 
 .main-title {
@@ -210,6 +216,14 @@ body {
   margin-right: 30px;
   margin-bottom: -6px;
 }
+
+.main-logo:hover {
+opacity: 0.6;
+}
+
+.main-logo:active {
+  opacity: 0.3;
+  }
 
 .main-logo-img {
   display: block;
@@ -407,11 +421,22 @@ body {
 
   display: flex;
   flex-wrap: wrap;
+
+}
+
+.qulaity-list-wide {
+   width: 1200px;
+  display: flex;
+  align-items: center;
+
+
+   background-color: #83B3D3;
 }
 
 .qulaity-list-wide .qulaity-item {
   color: #ffffff;
   background-color: #83B3D3;
+
 }
 
 .qulaity-item {
@@ -460,11 +485,6 @@ body {
 
 .qulaity-list-wide .title-card {
   color: #ffffff;
-}
-
-.qulaity-list-wide {
-  width: 1200px;
-  display: flex;
 }
 
 .advantages li.qulaity-item:nth-of-type(odd) {
@@ -1158,9 +1178,13 @@ body {
   text-decoration: none;
 }
 
-.pag-disabled {
+.pag-current {
   color: #000000;
   background-color: #F2F2F2;
+}
+
+.pag-current:hover {
+color: #ffffff;
 }
 
 /*===================== Модальное окно ===========================*/
@@ -1176,9 +1200,9 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
-/* .modal-container-close {
+.modal-container-close {
     display: none;
-} */
+}
 
 .modal {
   position: relative;
