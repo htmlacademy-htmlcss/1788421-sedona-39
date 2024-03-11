@@ -39,8 +39,8 @@ body {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+  /* max-width: 100%;
+  height: auto; */
   object-fit: contain;
 }
 
@@ -821,15 +821,33 @@ opacity: 0.6;
 /* +++++++++++++ КАТАЛОГ  range +++++++++++++++++++*/
 
 .range-wrapp-field {
+  position: relative;
   display: flex;
   gap: 2px;
   margin-bottom: 36px;
 }
 
+.label-price-min,
+.label-price-max {
+  position: absolute;
+  top: 14px;
+  color: #969595;
+}
+
+.label-price-min {
+  left: 115px;
+}
+
+.label-price-max {
+  right: 12px;
+}
+
+
 .min-price,
 .max-price {
   width: 143px;
   appearance: textfield;
+  padding-right: 35px;
 }
 
 .min-price {
@@ -842,7 +860,9 @@ opacity: 0.6;
 
 .min-price::placeholder,
 .max-price::placeholder {
-  text-align: end;
+color: #000000;
+opacity: 1;
+text-align: end;
 }
 
 .range-scale {
@@ -867,13 +887,22 @@ opacity: 0.6;
   display: block;
   position: absolute;
 
-
   width: 20px;
   height: 20px;
   border-radius: 5px;
   background-color: #ffffff;
   border: none;
 }
+
+.range-toggle:hover {
+  cursor: pointer;
+  background-color: #68A2CA;
+}
+
+.range-toggle:active {
+  background-color: #82B3D3;
+}
+
 
 .toggle-min {
   top: -8px;
@@ -888,11 +917,6 @@ opacity: 0.6;
 .button-big:first-child {
   margin-top: auto;
 }
-
-/* .filter-group,
-.filter-btn-wrapp {
-  outline: 1px solid black;
-} */
 
 /* +++++++++++++ КАТАЛОГ  checkbox & radio +++++++++++*/
 
@@ -945,12 +969,18 @@ opacity: 0.6;
   background-color: #3F5E72;
 }
 
+.filter-item:hover,
 .control:hover .control-mark {
   opacity: 0.6;
 }
 
 .control:active .control-mark {
   opacity: 0.3;
+}
+
+.filter-item,
+.control .control-mark {
+transition: opacity 0.25s ease-in-out;
 }
 
 /* +++++++++++++ КАТАЛОГ  select +++++++++++++++++++*/
@@ -973,6 +1003,15 @@ opacity: 0.6;
   background-image: url("../img/icons/arrow-bottom.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
+}
+
+.select-control:not(:disabled):hover {
+  cursor: pointer;
+  border: 2px solid #68A2CA;
+}
+
+.select-control:disabled {
+opacity: 0.3;
 }
 
 .card-view-buttons {
