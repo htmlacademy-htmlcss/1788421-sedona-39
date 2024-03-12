@@ -208,6 +208,7 @@ img {
 .main-header {
   display: flex;
   padding: 0 70px;
+  z-index: 1;
 }
 
 .main-logo {
@@ -1334,9 +1335,16 @@ color: #ffffff;
 }
 
 .search-form-field {
+padding-right: 38px;
+
   border-radius: 4px;
   -webkit-appearance: textfield;
   appearance: textfield;
+
+  background-image: url("../img/icons/calendar.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center right 20px;
 }
 
 .search-form {

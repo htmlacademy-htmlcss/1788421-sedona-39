@@ -149,7 +149,7 @@
               и мы покажем вам лучшие предложения гостиниц в Седоне
             </p>
 
-            <a class="button button-color button-link button-big" href="./modal.html">
+            <a class="button button-color button-link button-big" href="catalog.html">
               Поиск гостиницы в Седоне
             </a>
           </div>
@@ -212,6 +212,64 @@
       </footer>
 
       <!-- /*===================== Модальное окно ===========================*/ -->
+
+      <div class="modal-container">
+        <div class="modal modal-search">
+
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+
+          <section class="modal-content">
+            <h2 class="title-lead modal-title">Поиск гостиницы в Седоне</h2>
+
+            <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+
+              <label class="form-label label-data-in" for="search-in">
+                Дата заезда:
+              </label>
+              <input class="field search-form-field filed-in" type="text" id="search-in" name="search-in"
+                placeholder="27 апреля 2020">
+
+              <label class="form-label label-data-out" for="search-out">
+                Дата выезда:
+              </label>
+              <input class="field search-form-field filed-out" type="text" id="search-out" name="search-out"
+                placeholder="1 сентября 2023">
+
+              <label class="form-label label-audlts" for="search-audlts">
+                Взрослые:
+              </label>
+
+              <p class="counter-wrapp counter-wrapp-audlts">
+                <button class="btn-counter plus" type="button">-</button>
+
+                <input class="field search-form-field field-audlts" type="number" id="search-audlts"
+                  name="search-audlts" placeholder="2">
+
+                  <button class="btn-counter minus" type="button">+</button>
+                </p>
+
+
+              <label class="form-label label-children" for="search-children">
+                Дети:
+              </label>
+              <p class="counter-wrapp  counter-wrapp-children">
+                <button class="btn-counter plus" type="button">-</button>
+
+                <input class="field search-form-field field-children" type="number" id="search-children"
+                  name="search-children" placeholder="2">
+
+                <button class="btn-counter minus" type="button">+</button>
+              </p>
+
+              <button class="button search-form-button" type="button">
+                Найти
+              </button>
+            </form>
+          </section>
+        </div>
+      </div>
 
     </div>
   </body>
