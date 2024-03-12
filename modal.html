@@ -229,41 +229,65 @@
                 Дата заезда:
               </label>
               <input class="field search-form-field filed-in" type="text" id="search-in" name="search-in"
-                placeholder="27 апреля 2020">
+                placeholder="27 апреля 2020" value="27 апреля 2020">
 
               <label class="form-label label-data-out" for="search-out">
                 Дата выезда:
               </label>
               <input class="field search-form-field filed-out" type="text" id="search-out" name="search-out"
-                placeholder="1 сентября 2023">
+                placeholder="1 сентября 2023" value="1 сентября 2023">
 
               <label class="form-label label-audlts" for="search-audlts">
                 Взрослые:
               </label>
 
               <p class="counter-wrapp counter-wrapp-audlts">
-                <button class="btn-counter plus" type="button">-</button>
+                <button class="btn-counter btn-minus" type="button">
 
-                <input class="field field-audlts" type="number" id="search-audlts"
-                  name="search-audlts" placeholder="2">
+                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9V11H17V9H3Z" >
+                  </svg>
+                </button>
 
-                  <button class="btn-counter minus" type="button">+</button>
-                </p>
+                <input class="field-number field-audlts" type="number" id="search-audlts" name="search-audlts"
+                  placeholder="1" value="2">
+
+                <button class="btn-counter btn-plus" type="button">
+
+                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
+                  </svg>
+
+
+                </button>
+              </p>
 
 
               <label class="form-label label-children" for="search-children">
                 Дети:
               </label>
               <p class="counter-wrapp  counter-wrapp-children">
-                <button class="btn-counter plus" type="button">-</button>
+                <button class="btn-counter btn-minus" type="button">
 
-                <input class="field field-children" type="number" id="search-children"
-                  name="search-children" placeholder="2">
+                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9V11H17V9H3Z"/>
+                  </svg>
 
-                <button class="btn-counter minus" type="button">+</button>
+                </button>
+
+                <input class="field-number field-children" type="number" id="search-children" name="search-children"
+                  placeholder="0" value="2">
+
+                <button class="btn-counter btn-plus" type="button">
+
+                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
+                  </svg>
+
+                </button>
               </p>
 
-              <button class="button search-form-button" type="button">
+              <button class="button search-form-button" type="reset">
                 Найти
               </button>
             </form>

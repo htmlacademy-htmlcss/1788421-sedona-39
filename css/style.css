@@ -105,7 +105,8 @@ img {
 .select-control,
 .card-button,
 .field,
-.form-label {
+.form-label,
+.field-number {
   font-family: inherit;
 }
 
@@ -1270,6 +1271,7 @@ color: #ffffff;
 /*===================== Модальное окно ===========================*/
 
 .modal-container {
+z-index: 10;
 
   position: fixed;
   top: 0;
@@ -1314,6 +1316,14 @@ color: #ffffff;
   background-position: center;
   cursor: pointer;
 }
+
+.modal-close-button:hover {
+cursor: pointer;
+}
+
+.modal-close-button:active {
+opacity: 0.3;
+  }
 
 .modal-title {
   margin-bottom: 64px;
@@ -1408,35 +1418,54 @@ padding-right: 38px;
   border-radius: 4px;
 }
 
+.field-number {
+padding: 0;
+
+font-size: 18px;
+line-height: 20px;
+font-weight: 700;
+
+border: none;
+background-color: #F2F2F2;
+
+}
+
 .field-audlts,
 .field-children {
   -webkit-appearance: textfield;
   appearance: textfield;
 
-  min-width: 31px;
-  /* padding-left: 10px;
-  padding-right: 10px; */
+  width: 31px;
 
   text-align: center;
-
-  /* flex-shrink: 3; */
 }
 
 .btn-counter {
   -webkit-appearance: none;
   appearance: none;
   box-sizing: border-box;
-
-  /* flex-shrink: 1; */
-
+  display: block;
 
   width: 40px;
-  padding: 14px 10px;
-  text-align: center;
+  padding: 0;
 
-  font-size: 28px;
-  line-height: 28px;
-  color: rgba(117, 97, 87, 0.3);
-  border: none;
   background-color: #F2F2F2;
+  border: none;
+
+}
+
+.btn-counter-svg {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+
+.btn-counter:hover .btn-counter-svg {
+  cursor: pointer;
+  fill: #000000;
+}
+
+
+.btn-counter:active .btn-counter-svg {
+  cursor: pointer;
+  fill: rgba(0, 0, 0, 0.2);
 }
