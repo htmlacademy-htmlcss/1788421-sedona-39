@@ -1410,13 +1410,16 @@ padding-right: 38px;
 
 .field-audlts,
 .field-children {
- min-width: 31px;
-  padding-left: 10px;
-  padding-right: 10px;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+
+  min-width: 31px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
 
   text-align: center;
 
-  flex-shrink: 3;
+  /* flex-shrink: 3; */
 }
 
 .btn-counter {
@@ -1424,7 +1427,7 @@ padding-right: 38px;
   appearance: none;
   box-sizing: border-box;
 
-  flex-shrink: 1;
+  /* flex-shrink: 1; */
 
 
   width: 40px;
