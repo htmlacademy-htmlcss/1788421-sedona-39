@@ -383,7 +383,7 @@ opacity: 0.6;
   /* нужно для стики-футера*/
 }
 
-.hero {
+/* .hero {
   padding: 51px 70px 82px;
 
   text-align: center;
@@ -395,6 +395,37 @@ opacity: 0.6;
   background-size: 100% auto, cover;
   background-repeat: no-repeat;
   background-position: bottom, center;
+} */
+
+.hero {
+  padding: 51px 70px 82px 70px;
+position: relative;
+  text-align: center;
+
+  color: #ffffff;
+  background-color: #467AA9;
+  background-image: url(../img/background/index-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero::after {
+  content: "";
+display: block;
+position: absolute;
+bottom: 0;
+left: 0;
+
+width: 1200px;
+height: 57px;
+margin-top: 25px;
+
+background-image: url(../img/background/decor-corner.svg);
+  background-size: 100%, auto;
+  background-repeat: no-repeat;
+  background-position:left bottom;
+
 }
 
 .hero-img {
