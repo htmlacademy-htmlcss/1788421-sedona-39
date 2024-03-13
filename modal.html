@@ -7,6 +7,8 @@
     <title>HTML Academy: Седона</title>
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./favicon.ico">
+
     <!-- <link rel="stylesheet" href="./css/outline.css"> -->
 
   </head>
@@ -228,8 +230,17 @@
               <label class="form-label label-data-in" for="search-in">
                 Дата заезда:
               </label>
-              <input class="field search-form-field filed-in" type="text" id="search-in" name="search-in"
-                placeholder="27 апреля 2020" value="27 апреля 2020">
+
+              <div class="filed-in">
+                <input class="field search-form-field filed-in-valid " type="text" id="search-in" name="search-in"
+                  placeholder="27 апреля 2020" value="27 апреля 2020" required>
+                <!-- required pattern="[Bb]anana|[Cc]herry"  -->
+
+
+                <span class="filed-invalid">
+                  Мы не можем отправить вас в прошлое.
+                </span>
+              </div>
 
               <label class="form-label label-data-out" for="search-out">
                 Дата выезда:
@@ -244,9 +255,9 @@
               <p class="counter-wrapp counter-wrapp-audlts">
                 <button class="btn-counter btn-minus" type="button">
 
-                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 9V11H17V9H3Z">
+                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"
+                    focusable="false" xmlns="http://www.w3.org/2000/svg" >
+                    <path d="M3 9V11H17V9H3Z" />
                   </svg>
                 </button>
 
@@ -255,11 +266,10 @@
 
                 <button class="btn-counter btn-plus" type="button">
 
-                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"
+                    focusable="false" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
                   </svg>
-
 
                 </button>
               </p>
@@ -270,12 +280,19 @@
 
                 <span class="tooltip">
                   <button class="tooltip-toggle" type="button">
+                    <span class="visually-hidden">
+                      Дополнительная информация о детях
+                    </span>
 
-                    <svg class="tooltip-toggle-svg" xmlns="http://www.w3.org/2000/svg" width="2" height="12" fill="none" viewBox="0 0 2 12"><path fill="#fff" fill-rule="evenodd" d="M0 0h2v2H0V0Zm2 12H0V3h2v9Z" clip-rule="evenodd"/></svg>
+                    <svg class="tooltip-toggle-svg" xmlns="http://www.w3.org/2000/svg" width="2" height="12" fill="none"
+                      aria-hidden="true" focusable="false" viewBox="0 0 2 12">
+                      <path fill="#fff" fill-rule="evenodd" d="M0 0h2v2H0V0Zm2 12H0V3h2v9Z" clip-rule="evenodd" />
+                    </svg>
                   </button>
 
                   <span class="tooltip-text">
-                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
+                    размещаются бесплатно.
                   </span>
 
                 </span>
@@ -284,8 +301,8 @@
               <p class="counter-wrapp  counter-wrapp-children">
                 <button class="btn-counter btn-minus" type="button">
 
-                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"
+                    focusable="false" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 9V11H17V9H3Z" />
                   </svg>
 
@@ -296,17 +313,20 @@
 
                 <button class="btn-counter btn-plus" type="button">
 
-                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"
+                    focusable="false" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
                   </svg>
 
                 </button>
               </p>
 
-              <button class="button search-form-button" type="reset">
+              <button class="button search-form-button" type="submit">
                 Найти
               </button>
+
+              <button class="button reset-button" type="reset" style="padding: 0; background-color: orange;">
+                сброс </button>
             </form>
           </section>
         </div>
