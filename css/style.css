@@ -1376,7 +1376,7 @@ min-max-price::-webkit-inner-spin-button {
   font-weight: 700;
 
   padding: 12px 0;
-  align-self: center;
+  align-self: staet;
 }
 
 .search-form-field {
@@ -1403,7 +1403,7 @@ min-max-price::-webkit-inner-spin-button {
     "label-audlts field-audlts . label-children field-children"
     "search-btn search-btn search-btn search-btn search-btn";
 
-  gap: 48px 20px;
+  gap: 23px 20px;
 }
 
 .label-data-in {
@@ -1411,7 +1411,6 @@ min-max-price::-webkit-inner-spin-button {
 }
 
 .field-in {
-  position: relative;
   margin: 0;
 
   grid-area: field-in;
@@ -1446,6 +1445,8 @@ min-max-price::-webkit-inner-spin-button {
 
   padding-top: 18px;
   padding-bottom: 18px;
+
+  margin-top: 25px;
 }
 
 /*============== Модальное окно ФОРМА tooltip====================*/
@@ -1535,22 +1536,15 @@ min-max-price::-webkit-inner-spin-button {
 
 /*============== Модальное окно ФОРМА валидность ====================*/
 
-.field-invalid {
-  /* display: none; */
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-
+.field-sign {
   margin-top: 4px;
   padding: 0 20px;
 
   font-size: 16px;
-  color: #ff5757;
 }
 
-field-in-valid:invalid .field-invalid {
-  display: block;
-
+.field-sign-invalid {
+  color: #ff5757;
 }
 
 /*============== Модальное окно ФОРМА counter (счетчик)====================*/

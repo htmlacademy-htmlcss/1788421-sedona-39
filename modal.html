@@ -234,9 +234,8 @@
               <div class="field-in">
                 <input class="field search-form-field field-in-valid " type="text" id="search-in" name="search-in"
                   placeholder="27 апреля 2020" value="27 апреля 2020" required>
-                <!-- required pattern="[Bb]anana|[Cc]herry"  -->
 
-                <span class="field-invalid">
+                <span class="field-sign field-sign-invalid">
                   Мы не можем отправить вас в прошлое.
                 </span>
               </div>
@@ -244,8 +243,14 @@
               <label class="form-label label-data-out" for="search-out">
                 Дата выезда:
               </label>
-              <input class="field search-form-field field-out" type="text" id="search-out" name="search-out"
-                placeholder="1 сентября 2023" value="1 сентября 2023">
+
+              <div class="field-out">
+                <input class="field search-form-field " type="text" id="search-out" name="search-out"
+                  placeholder="1 сентября 2023" value="1 сентября 2023">
+
+                <span class="field-sign ">
+                  На эти даты есть свободные номера. Пока есть.
+              </div>
 
               <label class="form-label label-audlts" for="search-audlts">
                 Взрослые:
@@ -256,8 +261,8 @@
                   <span class="visually-hidden">минус</span>
                 </button>
 
-                <input class="field-number" type="number" id="search-audlts" name="search-audlts" min="1"
-                  max="99" placeholder="1" value="2">
+                <input class="field-number" type="number" id="search-audlts" name="search-audlts" min="1" max="99"
+                  placeholder="1" value="2">
 
                 <button class="btn-counter btn-plus" type="button">
                   <span class="visually-hidden">плюс</span>
@@ -292,8 +297,8 @@
                   <span class="visually-hidden">минус</span>
                 </button>
 
-                <input class="field-number" type="number" id="search-children" name="search-children"
-                  placeholder="0" value="2" min="0" max="99">
+                <input class="field-number" type="number" id="search-children" name="search-children" placeholder="0"
+                  value="2" min="0" max="99">
 
                 <button class="btn-counter btn-plus" type="button">
                   <span class="visually-hidden">плюс</span>
@@ -303,9 +308,6 @@
               <button class="button search-form-button" type="submit">
                 Найти
               </button>
-
-              <button class="button reset-button" type="reset" style="padding: 0; background-color: orange;">
-                сброс </button>
             </form>
           </section>
         </div>
