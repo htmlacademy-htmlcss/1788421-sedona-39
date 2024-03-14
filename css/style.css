@@ -214,6 +214,10 @@ img {
   padding-right: 50px;
 }
 
+a.button:not([href]),
+.button:disabled {
+background-color: #E5E5E5;
+}
 /*===================== heder ===========================*/
 .main-header {
   display: flex;
@@ -313,15 +317,13 @@ img {
   background-color: #756257;
 }
 
-.user-icon-serch,
-.user-icon-favorit {
+.user-icon {
   width: 20px;
   height: 20px;
   position: relative;
 }
 
-.user-icon-serch::before,
-.user-icon-favorit::before {
+.user-icon::before {
   content: "";
   display: block;
   width: 20px;
@@ -350,13 +352,11 @@ img {
 
 }
 
-.user-icon-serch:not(:disabled):hover::before,
-.user-icon-favorit:not(:disabled):hover::before {
+.user-icon:hover::before {
   background-color: #756157;
 }
 
-.user-icon-serch:not(:disabled):active::before,
-.user-icon-favorit:not(:disabled):active::before {
+.user-icon:active::before {
   background-color: rgb(117, 97, 87, 0.3);
 }
 
@@ -610,9 +610,6 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px 0;
-
-  border-radius: 4px;
-  overflow: hidden;
 }
 
 .field {
@@ -634,13 +631,14 @@ img {
 .input-mail {
   min-width: 452px;
   display: inline;
+  border-radius: 4px 0 0 4px;
 }
 
 .subscribe-form .button {
   flex-grow: 1;
   font-size: 20px;
   line-height: 36px;
-  border-radius: 0;
+  border-radius: 0 4px 4px 0;
 }
 
 /*========+++++++++++++footer-footer =====================*/
@@ -863,35 +861,34 @@ img {
 
 /* +++++++++++++ КАТАЛОГ  range +++++++++++++++++++*/
 
+min-max-price::-webkit-outer-spin-button,
+min-max-price::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 .range-wrapp-field {
-  position: relative;
   display: flex;
   gap: 2px;
   margin-bottom: 36px;
 }
 
-.label-price-min,
-.label-price-max {
-  position: absolute;
-  top: 14px;
+.label-price {
+  position: relative;
   color: #969595;
 }
 
-.label-price-min {
-  left: 115px;
+.label-price-text {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  right: 10px;
 }
 
-.label-price-max {
-  right: 12px;
-}
-
-
-.min-price,
-.max-price {
+.min-max-price {
   width: 143px;
-  -webkit-appearance: textfield;
-  appearance: textfield;
   padding-right: 35px;
+
+  appearance: textfield;
 }
 
 .min-price {
@@ -902,16 +899,29 @@ img {
   border-radius: 0 5px 5px 0;
 }
 
-.min-price::placeholder,
-.max-price::placeholder {
+.min-max-price::placeholder {
   color: #000000;
   opacity: 1;
 }
 
+/* +++++++++++++ КАТАЛОГ  range range-scale+++++++++++++++++++*/
+
 .range-scale {
   position: relative;
 
-  width: 287px;
+  width: 100%;
+  height: 20px;
+}
+
+.range-scale::before {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: block;
+  width: 100%;
   height: 4px;
 
   background-color: rgba(255, 255, 255, 0.3);
@@ -919,6 +929,9 @@ img {
 
 .range-bar {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
   left: 39px;
   width: 126px;
 
@@ -935,6 +948,10 @@ img {
   border-radius: 5px;
   background-color: #ffffff;
   border: none;
+}
+
+.range-toggle:disabled {
+  background-color: #E5E5E5;
 }
 
 .range-toggle:not(:disabled):hover {
@@ -1012,17 +1029,15 @@ img {
   background-color: #3F5E72;
 }
 
-.filter-item:hover,
-.control:hover .control-mark {
+.control:hover{
   opacity: 0.6;
 }
 
-.control:active .control-mark {
+.control:active {
   opacity: 0.3;
 }
 
-.filter-item,
-.control .control-mark {
+.control {
   transition: opacity 0.25s ease-in-out;
 }
 
@@ -1031,6 +1046,7 @@ img {
 .select-control {
   -webkit-appearance: none;
   appearance: none;
+
   box-sizing: border-box;
   min-width: 292px;
   max-height: 48px;
@@ -1364,6 +1380,7 @@ img {
 }
 
 .search-form-field {
+  width: 100%;
   padding-right: 38px;
 
   border-radius: 4px;
@@ -1381,8 +1398,8 @@ img {
   width: 100%;
   grid-template-columns: 119px 110px 60px 119px 110px;
 
-  grid-template-areas: "label-in filed-in filed-in filed-in filed-in"
-    "label-out filed-out  filed-out filed-out filed-out"
+  grid-template-areas: "label-in field-in field-in field-in field-in"
+    "label-out field-out  field-out field-out field-out"
     "label-audlts field-audlts . label-children field-children"
     "search-btn search-btn search-btn search-btn search-btn";
 
@@ -1393,19 +1410,19 @@ img {
   grid-area: label-in;
 }
 
-.filed-in {
+.field-in {
   position: relative;
   margin: 0;
 
-  grid-area: filed-in;
+  grid-area: field-in;
 }
 
 .label-data-out {
   grid-area: label-out;
 }
 
-.filed-out {
-  grid-area: filed-out;
+.field-out {
+  grid-area: field-out;
 }
 
 .label-audlts {
@@ -1518,7 +1535,7 @@ img {
 
 /*============== Модальное окно ФОРМА валидность ====================*/
 
-.filed-invalid {
+.field-invalid {
   /* display: none; */
   position: absolute;
   bottom: -10px;
@@ -1531,7 +1548,7 @@ img {
   color: #ff5757;
 }
 
-filed-in-valid:invalid .filed-invalid {
+field-in-valid:invalid .field-invalid {
   display: block;
 
 }
@@ -1545,33 +1562,32 @@ filed-in-valid:invalid .filed-invalid {
   border-radius: 4px;
 }
 
+
 .field-number {
   z-index: 1;
   padding: 0;
+  width: 31px;
+
+  appearance: textfield;
 
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
+  text-align: center;
 
   border: none;
   background-color: #F2F2F2;
-
 }
 
-.field-audlts,
-.field-children {
-
-  -webkit-appearance: textfield;
-  appearance: textfield;
-
-  width: 31px;
-
-  text-align: center;
+.field-number::-webkit-outer-spin-button,
+.field-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .btn-counter {
   -webkit-appearance: none;
   appearance: none;
+
   box-sizing: border-box;
   display: block;
 
@@ -1582,16 +1598,41 @@ filed-in-valid:invalid .filed-invalid {
   border: none;
 }
 
-.btn-counter-svg {
-  fill: rgba(117, 97, 87, 0.3);
+.btn-counter::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height:20px;
+
+  margin: 0 auto;
+
+  background-color: rgba(117, 97, 87, 0.3);
+
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+/* background-color: violet; */
 }
 
-.btn-counter:hover .btn-counter-svg {
-  cursor: pointer;
-  fill: #000000;
+.btn-minus::before{
+  mask-image: url(../img/icons/button-minus.svg);
 }
 
-.btn-counter:active .btn-counter-svg {
+.btn-plus::before{
+  mask-image: url(../img/icons/button-plus.svg);
+}
+
+.btn-counter:not(:disabled):hover::before {
   cursor: pointer;
-  fill: rgba(0, 0, 0, 0.2);
+  background-color: #000000;
+}
+
+.btn-counter:not(:disabled):active::before {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.2);
 }

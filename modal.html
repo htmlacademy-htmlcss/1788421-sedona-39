@@ -231,13 +231,12 @@
                 Дата заезда:
               </label>
 
-              <div class="filed-in">
-                <input class="field search-form-field filed-in-valid " type="text" id="search-in" name="search-in"
+              <div class="field-in">
+                <input class="field search-form-field field-in-valid " type="text" id="search-in" name="search-in"
                   placeholder="27 апреля 2020" value="27 апреля 2020" required>
                 <!-- required pattern="[Bb]anana|[Cc]herry"  -->
 
-
-                <span class="filed-invalid">
+                <span class="field-invalid">
                   Мы не можем отправить вас в прошлое.
                 </span>
               </div>
@@ -245,7 +244,7 @@
               <label class="form-label label-data-out" for="search-out">
                 Дата выезда:
               </label>
-              <input class="field search-form-field filed-out" type="text" id="search-out" name="search-out"
+              <input class="field search-form-field field-out" type="text" id="search-out" name="search-out"
                 placeholder="1 сентября 2023" value="1 сентября 2023">
 
               <label class="form-label label-audlts" for="search-audlts">
@@ -254,26 +253,16 @@
 
               <p class="counter-wrapp counter-wrapp-audlts">
                 <button class="btn-counter btn-minus" type="button">
-
-                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"
-                    focusable="false" xmlns="http://www.w3.org/2000/svg" >
-                    <path d="M3 9V11H17V9H3Z" />
-                  </svg>
+                  <span class="visually-hidden">минус</span>
                 </button>
 
-                <input class="field-number field-audlts" type="number" id="search-audlts" name="search-audlts" min="1"
+                <input class="field-number" type="number" id="search-audlts" name="search-audlts" min="1"
                   max="99" placeholder="1" value="2">
 
                 <button class="btn-counter btn-plus" type="button">
-
-                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"
-                    focusable="false" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
-                  </svg>
-
+                  <span class="visually-hidden">плюс</span>
                 </button>
               </p>
-
 
               <span class="form-label label-children tooltip-wrapp">
                 <label for="search-children"> Дети: </label>
@@ -300,24 +289,14 @@
 
               <p class="counter-wrapp  counter-wrapp-children">
                 <button class="btn-counter btn-minus" type="button">
-
-                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"
-                    focusable="false" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 9V11H17V9H3Z" />
-                  </svg>
-
+                  <span class="visually-hidden">минус</span>
                 </button>
 
-                <input class="field-number field-children" type="number" id="search-children" name="search-children"
+                <input class="field-number" type="number" id="search-children" name="search-children"
                   placeholder="0" value="2" min="0" max="99">
 
                 <button class="btn-counter btn-plus" type="button">
-
-                  <svg class="btn-counter-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"
-                    focusable="false" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
-                  </svg>
-
+                  <span class="visually-hidden">плюс</span>
                 </button>
               </p>
 

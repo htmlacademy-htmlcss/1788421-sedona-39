@@ -37,19 +37,19 @@
           <div class="nav-wrapp">
             <ul class="nav-user ">
               <li class="nav-item">
-                <a class="nav-link user-icon-serch" href="#search">
+                <a class="nav-link user-icon user-icon-serch" href="#search">
                   <span class="visually-hidden">Поиск</span>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link user-icon-favorit" href="#">
+                <a class="nav-link user-icon user-icon-favorit" href="#">
                   <span class="visually-hidden">Избранное</span>
                   <span class="favorit-page">12</span>
                 </a>
               </li>
             </ul>
-            <button class="button button-color" type="button"> Хочу сюда</button> <!-- открывает модальное окно -->
+            <a class="button button-color button-link" href="./modal.html"> Хочу сюда</a> <!-- открывает модальное окно -->
           </div>
 
         </nav>
@@ -94,7 +94,7 @@
 
               <ul class="filter-list">
                 <li class="filter-item">
-                  <label class="control">
+                  <label class="control" >
                     <input class="control-input visually-hidden" type="checkbox" name="pool" checked>
                     <span class="control-mark"></span>
                     <span class="control-label">Бассейн</span>
@@ -111,7 +111,7 @@
 
                 <li class="filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="checkbox" name="wi-fi">
+                    <input class="control-input visually-hidden " type="checkbox" name="wi-fi" >
                     <span class="control-mark"></span>
                     <span class="control-label"> Wi-Fi</span>
                   </label>
@@ -155,24 +155,35 @@
 
                 <div class="range">
                   <div class="range-wrapp-field">
-                    <label class="label-price-min" for="min-price">от</label>
-                    <input class="field min-price" type="number" id="min-price" name="min-price" placeholder="0">
 
-                    <label class="label-price-max" for="max-price">до </label>
-                    <input class="field max-price" type="number" id="max-price" name="max-price" placeholder="9000">
+                    <label class="label-price " for="min-price">
+                      <span class="label-price-text">от</span>
+
+                      <input class="field min-max-price min-price" type="number" id="min-price" name="min-price" placeholder="0" min="0">
+                    </label>
+
+                    <label class="label-price" for="max-price">
+                      <span class="label-price-text">до</span>
+
+                      <input class="field min-max-price max-price" type="number" id="max-price" name="max-price" placeholder="9000" min="0">
+                    </label>
+
                   </div>
 
-                  <div class="range-scale">
-                    <div class="range-bar">
-                      <button class="range-toggle toggle-min" type="button">
-                        <span class="visually-hidden">Изменить минимальную цену</span>
-                      </button>
-                      <button class="range-toggle toggle-max" type="button">
-                        <span class="visually-hidden">Изменить максимальную цену</span>
-                      </button>
+                  <div class="range-scale-wrapp">
+                    <div class="range-scale">
+                      <div class="range-bar">
+                        <button class="range-toggle toggle-min" type="button">
+                          <span class="visually-hidden">Изменить минимальную цену</span>
+                        </button>
+                        <button class="range-toggle toggle-max" type="button">
+                          <span class="visually-hidden">Изменить максимальную цену</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
+                  </div>
+
               </fieldset>
 
               <div class="filter-btn-wrapp">
@@ -344,8 +355,8 @@
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe-email">Email</label>
 
-            <input class="field input-mail" placeholder="Ваш e-mail" type="email"
-              name="subscribe-email" id="subscribe-email" required>
+            <input class="field input-mail" placeholder="Ваш e-mail" type="email" name="subscribe-email"
+              id="subscribe-email" required>
 
             <button class="button button-big" type="submit">Подписаться</button>
           </form>
