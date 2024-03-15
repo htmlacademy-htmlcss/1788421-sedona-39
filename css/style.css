@@ -1393,14 +1393,14 @@ line-height: 26px;
 }
 
 /*===================== Модальное окно ФОРМА ===========================*/
-.search-form label,
+/* .search-form label,
 .search-form input,
 .search-form p,
 .tooltip-wrapp,
 .search-form,
 .modal-content  {
   outline: 1px solid blue;
-}
+} */
 
 .form-label {
   padding: 12px 0;
