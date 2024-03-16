@@ -248,6 +248,14 @@ background-color: #E5E5E5;
   display: block;
 }
 
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  align-items: start;
+}
+
 .nav-list {
   margin: 0;
   padding: 0;
@@ -258,6 +266,7 @@ background-color: #E5E5E5;
   gap: 10px 0;
   /* justify-content: space-between; */
   min-width: 340px;
+  max-width: 465px;
 }
 
 .nav-user {
@@ -271,12 +280,14 @@ background-color: #E5E5E5;
   align-items: center;
 
   min-width: 88px;
+  max-width: 190px;
 }
 
 .nav-wrapp {
   display: flex;
   align-items: center;
   gap: 20px;
+  /* align-items: start; */
 }
 
 .nav-link {
@@ -370,14 +381,6 @@ background-color: #E5E5E5;
   position: absolute;
   top: 5px;
   right: 5px;
-}
-
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  width: 100%;
-  /* flex-grow: 1; */
 }
 
 .favorit-page {
@@ -476,6 +479,7 @@ background-color: #E5E5E5;
   width: 1200px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 
 
   background-color: #83B3D3;
@@ -592,9 +596,8 @@ background-color: #E5E5E5;
 }
 
 
-.search .button-big {
-  line-height: 51px;
-    padding: 13px 50px;
+.search .button {
+  display: inline-block;
 }
 /*================ subscribe ===========================*/
 
@@ -609,7 +612,7 @@ background-color: #E5E5E5;
   background-color: #467AA9;
   /* цвет для фона просто взят с фоновой картинки пипеткой*/
   background-image: url(../img/background/bg_subscribe.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -661,15 +664,11 @@ background-color: #E5E5E5;
 /*========+++++++++++++footer-footer =====================*/
 
 .footer-wrapp {
-  /* display: grid;
-  grid-template-columns: 150px 335px 115px; */
-
-  display: flex;
-  /* gap: 232px; */
+   display: flex;
   justify-content: space-between;
 
   text-align: center;
-  align-items: center;
+  align-items: start;
   padding: 45px 70px 30px;
 }
 
@@ -826,6 +825,7 @@ max-width: 720px;
 .catalog-filter {
   display: flex;
   gap: 75px;
+  flex-wrap: wrap;
 }
 
 .filter-title {
@@ -857,8 +857,9 @@ text-transform: capitalize;
 .filter-wrapp {
   display: flex;
   gap: 70px;
+  flex-wrap: wrap;
 
-  margin-left: 77px;
+  margin-left: auto;
 }
 
 .filter-btn-wrapp {
@@ -904,6 +905,12 @@ min-max-price::-webkit-inner-spin-button {
   top: 50%;
   transform: translatey(-50%);
   right: 20px;
+
+  max-width: 50px;
+ height: 24px;
+
+  text-align: end;
+
 }
 
 .min-max-price {
@@ -1103,6 +1110,8 @@ left: 0;
   padding: 0;
   list-style: none;
 
+width: 160px;
+
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -1177,14 +1186,9 @@ left: 0;
   /* width: 340px; */
   padding: 19px 19px;
 
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center; */
-
   display: grid;
   grid-template-columns: 1fr 1fr;
-
+grid-template-rows: min-content;
   gap: 16px;
 
   align-items: start;
@@ -1390,6 +1394,7 @@ line-height: 26px;
 
 .modal-title {
   margin-bottom: 64px;
+  max-width: 540px;
 }
 
 /*===================== Модальное окно ФОРМА ===========================*/
