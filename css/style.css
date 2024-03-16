@@ -842,6 +842,8 @@ text-transform: capitalize;
   margin: 0;
   border: none;
   padding: 0;
+
+  max-width: 200px;
 }
 
 .filter-list {
@@ -1028,6 +1030,7 @@ left: 0;
 }
 
 .control-label {
+  display: inline-block;
   line-height: 23px;
 }
 
@@ -1303,6 +1306,7 @@ grid-template-rows: min-content;
 
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
   padding: 40px 0 60px;
 }
 
