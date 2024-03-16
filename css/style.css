@@ -210,18 +210,19 @@ img {
 }
 
 .button-big {
-   padding: 8px 50px;
+  padding: 8px 50px;
 }
 
 .button-big-text {
   font-size: 20px;
-line-height: 36px;
+  line-height: 36px;
 }
 
 a.button:not([href]),
 .button:disabled {
-background-color: #E5E5E5;
+  background-color: #E5E5E5;
 }
+
 /*===================== heder ===========================*/
 .main-header {
   display: flex;
@@ -599,6 +600,7 @@ background-color: #E5E5E5;
 .search .button {
   display: inline-block;
 }
+
 /*================ subscribe ===========================*/
 
 .subscribe {
@@ -664,7 +666,7 @@ background-color: #E5E5E5;
 /*========+++++++++++++footer-footer =====================*/
 
 .footer-wrapp {
-   display: flex;
+  display: flex;
   justify-content: space-between;
 
   text-align: center;
@@ -673,7 +675,7 @@ background-color: #E5E5E5;
 }
 
 .phone-text {
-max-width: 720px;
+  max-width: 720px;
 }
 
 .footer-social {
@@ -835,7 +837,7 @@ max-width: 720px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .filter-group {
@@ -886,9 +888,9 @@ text-transform: capitalize;
 
 /* +++++++++++++ КАТАЛОГ  range +++++++++++++++++++*/
 
-min-max-price::-webkit-outer-spin-button,
-min-max-price::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+.min-max-price::-webkit-outer-spin-button,
+.min-max-price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .range-wrapp-field {
@@ -900,7 +902,7 @@ min-max-price::-webkit-inner-spin-button {
 .label-price {
   position: relative;
   color: #969595;
- }
+}
 
 .label-price-text {
   position: absolute;
@@ -909,10 +911,9 @@ min-max-price::-webkit-inner-spin-button {
   right: 20px;
 
   max-width: 50px;
- height: 24px;
+  height: 24px;
 
   text-align: end;
-
 }
 
 .min-max-price {
@@ -930,11 +931,6 @@ min-max-price::-webkit-inner-spin-button {
 
 .max-price {
   border-radius: 0 5px 5px 0;
-}
-
-.min-max-price::placeholder {
-  color: #000000;
-  opacity: 1;
 }
 
 /* +++++++++++++ КАТАЛОГ  range range-scale+++++++++++++++++++*/
@@ -996,10 +992,9 @@ min-max-price::-webkit-inner-spin-button {
   background-color: #82B3D3;
 }
 
-
 .toggle-min {
   top: -8px;
-left: 0;
+  left: 0;
 }
 
 .toggle-max {
@@ -1034,6 +1029,10 @@ left: 0;
   line-height: 23px;
 }
 
+.control-input:focus + .control-mark::after{
+  background-color: violet;
+}
+
 .control-input[type="checkbox"]:checked + .control-mark::after {
   display: block;
   content: "";
@@ -1063,7 +1062,8 @@ left: 0;
   background-color: #3F5E72;
 }
 
-.control:hover{
+.control:hover {
+  cursor: pointer;
   opacity: 0.6;
 }
 
@@ -1113,7 +1113,7 @@ left: 0;
   padding: 0;
   list-style: none;
 
-width: 160px;
+  width: 160px;
 
   display: flex;
   flex-wrap: wrap;
@@ -1191,7 +1191,7 @@ width: 160px;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-grid-template-rows: min-content;
+  grid-template-rows: min-content;
   gap: 16px;
 
   align-items: start;
@@ -1324,8 +1324,8 @@ grid-template-rows: min-content;
 }
 
 .pag-points {
-font-size: 22px;
-line-height: 26px;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .pag-current {
@@ -1349,7 +1349,7 @@ line-height: 26px;
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
-  }
+}
 
 .modal-container-close {
   display: none;
@@ -1418,7 +1418,7 @@ line-height: 26px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .search-form-field {
@@ -1527,7 +1527,7 @@ text-transform: capitalize;
   background-color: #68A2CA;
 }
 
-.tooltip-toggle:active .tooltip-toggle-svg {
+.tooltip-toggle:active {
   opacity: 0.3;
 }
 
@@ -1625,7 +1625,7 @@ text-transform: capitalize;
 
 .field-number::-webkit-outer-spin-button,
 .field-number::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 .btn-counter {
@@ -1646,7 +1646,7 @@ text-transform: capitalize;
   content: '';
   display: block;
   width: 20px;
-  height:20px;
+  height: 20px;
 
   margin: 0 auto;
 
@@ -1660,14 +1660,14 @@ text-transform: capitalize;
   mask-repeat: no-repeat;
   mask-position: center;
 
-/* background-color: violet; */
+  /* background-color: violet; */
 }
 
-.btn-minus::before{
+.btn-minus::before {
   mask-image: url(../img/icons/button-minus.svg);
 }
 
-.btn-plus::before{
+.btn-plus::before {
   mask-image: url(../img/icons/button-plus.svg);
 }
 
