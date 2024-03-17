@@ -668,6 +668,14 @@ a.button:not([href]),
   background-color: #E6E6E6;
 }
 
+.field:not(:disabled):focus {
+  outline: 3px solid #83B3D3;
+}
+
+.field:disabled {
+opacity: 0.6;
+}
+
 .input-mail {
   min-width: 452px;
   display: inline;
@@ -1076,18 +1084,22 @@ a.button:not([href]),
   background-color: #3F5E72;
 }
 
-.control:not(:disabled):hover  {
+.control:hover  {
   cursor: pointer;
   opacity: 0.6;
 }
-
 
 .control-input:focus + .control-mark {
   outline: 3px solid #83B3D3;
 }
 
-.control:not(:disabled):active {
+.control:active {
   opacity: 0.3;
+}
+
+.control-input:disabled + .control-mark,
+.control-input:disabled ~ .control-label {
+  opacity: 0.1;
 }
 
 .control {
@@ -1412,15 +1424,23 @@ a.button:not([href]),
   background-position: center;
 }
 
-.modal-close-button:hover {
+.modal-close-button:not(:disabled):hover,
+.modal-close-button:not(:disabled):focus {
   cursor: pointer;
   background-color: #E6E6E6;
 }
 
-.modal-close-button:active {
+.modal-close-button:not(:disabled):focus {
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:not(:disabled):active {
   opacity: 0.3;
   background-color: #868686;
+}
 
+.modal-close-button:disabled {
+  opacity: 0.1;
 }
 
 .modal-title {
@@ -1549,14 +1569,19 @@ a.button:not([href]),
   border: none;
 }
 
-.tooltip-toggle:hover {
+.tooltip-toggle:not(:disabled):hover {
   cursor: pointer;
   background-color: #68A2CA;
 }
 
-.tooltip-toggle:active {
+.tooltip-toggle:not(:disabled):active {
   opacity: 0.3;
 }
+
+.tooltip-toggle:disabled {
+  opacity: 0.1;
+}
+
 
 .tooltip-text {
   display: none;
@@ -1605,8 +1630,8 @@ a.button:not([href]),
   background-size: auto;
 }
 
-.tooltip:hover .tooltip-text,
-.tooltip:active .tooltip-text {
+.tooltip-toggle:not(:disabled):hover ~ .tooltip-text,
+.tooltip-toggle:not(:disabled):focus ~ .tooltip-text {
   display: block;
 }
 
@@ -1655,6 +1680,24 @@ a.button:not([href]),
   -webkit-appearance: none;
 }
 
+
+.field-number::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.field-number:not(:disabled):hover,
+.field-number:not(:disabled):focus {
+  background-color: #E6E6E6;
+}
+
+.field-number:not(:disabled):focus {
+  outline: 3px solid #83B3D3;
+}
+
+.field-number:disabled {
+opacity: 0.6;
+}
+
 .btn-counter {
   -webkit-appearance: none;
   appearance: none;
@@ -1701,6 +1744,10 @@ a.button:not([href]),
 .btn-counter:not(:disabled):hover::before {
   cursor: pointer;
   background-color: #000000;
+}
+
+.btn-counter:focus .btn-counter::before {
+  outline: 1px solid red;
 }
 
 .btn-counter:not(:disabled):active::before {
