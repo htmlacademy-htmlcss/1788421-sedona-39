@@ -163,8 +163,7 @@ img {
   border: none;
 }
 
-.button:not(:disabled):hover,
-.button:not(:disabled):focus {
+.button:not(:disabled):hover {
   cursor: pointer;
   background-color: #68A2CA;
 }
@@ -181,8 +180,7 @@ img {
   background-color: #756157;
 }
 
-.button-color:not(:disabled):hover,
-.button-color:not(:disabled):focus {
+.button-color:not(:disabled):hover {
   background-color: #615048;
 }
 
@@ -190,8 +188,7 @@ img {
   background-color: #7DB54F;
 }
 
-.button-select:not(:disabled):hover,
-.button-select:not(:disabled):focus {
+.button-select:not(:disabled):hover {
   background-color: #6C9E42;
 }
 
@@ -202,12 +199,6 @@ img {
 .button-light:not(:disabled):hover {
   opacity: 0.6;
   background-color: transparent;
-}
-
-.button-light:not(:disabled):focus {
-  color: #ffffff;
-  background-color: transparent;
-  outline: 3px solid #83B3D3;
 }
 
 .button-light:not(:disabled):active {
@@ -231,7 +222,6 @@ img {
   line-height: 36px;
 }
 
-a.button:not([href]),
 .button:disabled {
   background-color: #E5E5E5;
 }
@@ -415,20 +405,6 @@ a.button:not([href]),
   /* нужно для стики-футера*/
 }
 
-/* .hero {
-  padding: 51px 70px 82px;
-
-  text-align: center;
-
-  color: #ffffff;
-  background-color: #467AA9;
-  background-image: url(../img/background/decor-corner.svg),
-    url(../img/background/index-background.jpg);
-  background-size: 100% auto, cover;
-  background-repeat: no-repeat;
-  background-position: bottom, center;
-} */
-
 .hero {
   padding: 51px 70px 82px 70px;
   position: relative;
@@ -457,7 +433,6 @@ a.button:not([href]),
   background-size: 100%, auto;
   background-repeat: no-repeat;
   background-position: left bottom;
-
 }
 
 .hero-img {
@@ -663,13 +638,8 @@ a.button:not([href]),
   color: rgba(0, 0, 0, 0.6);
 }
 
-.field:not(:disabled):hover,
-.field:not(:disabled):focus {
+.field:not(:disabled):hover{
   background-color: #E6E6E6;
-}
-
-.field:not(:disabled):focus {
-  outline: 3px solid #83B3D3;
 }
 
 .field:disabled {
@@ -936,7 +906,7 @@ opacity: 0.6;
   transform: translatey(-50%);
   right: 20px;
 
-  max-width: 50px;
+  width: 20px;
   height: 24px;
 
   text-align: end;
@@ -1090,7 +1060,7 @@ opacity: 0.6;
 }
 
 .control-input:focus + .control-mark {
-  outline: 3px solid #83B3D3;
+  outline: auto;
 }
 
 .control:active {
@@ -1130,8 +1100,7 @@ opacity: 0.6;
   background-position: right 20px center;
 }
 
-.select-control:not(:disabled):hover,
-.select-control:not(:disabled):focus {
+.select-control:not(:disabled):hover {
   cursor: pointer;
   border: 2px solid #68A2CA;
   outline: transparent;
@@ -1184,11 +1153,6 @@ opacity: 0.6;
 
 .card-button:not(:disabled):hover {
   border: 2px solid #000000;
-}
-
-.card-button:not(:disabled):focus {
-  border: 2px solid #68A2CA;
-  outline: transparent;
 }
 
 .card-button:not(:disabled):active {
@@ -1424,14 +1388,9 @@ opacity: 0.6;
   background-position: center;
 }
 
-.modal-close-button:not(:disabled):hover,
-.modal-close-button:not(:disabled):focus {
+.modal-close-button:not(:disabled):hover {
   cursor: pointer;
   background-color: #E6E6E6;
-}
-
-.modal-close-button:not(:disabled):focus {
-  outline: 3px solid #83B3D3;
 }
 
 .modal-close-button:not(:disabled):active {
@@ -1685,13 +1644,8 @@ opacity: 0.6;
   color: rgba(0, 0, 0, 0.6);
 }
 
-.field-number:not(:disabled):hover,
-.field-number:not(:disabled):focus {
+.field-number:not(:disabled):hover {
   background-color: #E6E6E6;
-}
-
-.field-number:not(:disabled):focus {
-  outline: 3px solid #83B3D3;
 }
 
 .field-number:disabled {
@@ -1744,10 +1698,6 @@ opacity: 0.6;
 .btn-counter:not(:disabled):hover::before {
   cursor: pointer;
   background-color: #000000;
-}
-
-.btn-counter:focus .btn-counter::before {
-  outline: 1px solid red;
 }
 
 .btn-counter:not(:disabled):active::before {
