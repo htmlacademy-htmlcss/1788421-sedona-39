@@ -663,6 +663,11 @@ a.button:not([href]),
   color: rgba(0, 0, 0, 0.6);
 }
 
+.field:not(:disabled):hover,
+.field:not(:disabled):focus {
+  background-color: #E6E6E6;
+}
+
 .input-mail {
   min-width: 452px;
   display: inline;
