@@ -163,7 +163,8 @@ img {
   border: none;
 }
 
-.button:not(:disabled):hover {
+.button:not(:disabled):hover,
+.button:not(:disabled):focus {
   cursor: pointer;
   background-color: #68A2CA;
 }
@@ -180,7 +181,8 @@ img {
   background-color: #756157;
 }
 
-.button-color:not(:disabled):hover {
+.button-color:not(:disabled):hover,
+.button-color:not(:disabled):focus {
   background-color: #615048;
 }
 
@@ -188,7 +190,8 @@ img {
   background-color: #7DB54F;
 }
 
-.button-select:not(:disabled):hover {
+.button-select:not(:disabled):hover,
+.button-select:not(:disabled):focus {
   background-color: #6C9E42;
 }
 
@@ -197,12 +200,22 @@ img {
 }
 
 .button-light:not(:disabled):hover {
-  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.6;
   background-color: transparent;
 }
 
+.button-light:not(:disabled):focus {
+  color: #ffffff;
+  background-color: transparent;
+  outline: 3px solid #83B3D3;
+}
+
 .button-light:not(:disabled):active {
-  color: rgba(255, 255, 255, 0.3);
+  opacity: 0.3;
+}
+
+.button-light:disabled {
+  opacity: 0.1;
 }
 
 .button-link {
@@ -1029,10 +1042,6 @@ a.button:not([href]),
   line-height: 23px;
 }
 
-.control-input:focus + .control-mark::after{
-  background-color: violet;
-}
-
 .control-input[type="checkbox"]:checked + .control-mark::after {
   display: block;
   content: "";
@@ -1062,12 +1071,17 @@ a.button:not([href]),
   background-color: #3F5E72;
 }
 
-.control:hover {
+.control:not(:disabled):hover  {
   cursor: pointer;
   opacity: 0.6;
 }
 
-.control:active {
+
+.control-input:focus + .control-mark {
+  outline: 3px solid #83B3D3;
+}
+
+.control:not(:disabled):active {
   opacity: 0.3;
 }
 
@@ -1099,9 +1113,11 @@ a.button:not([href]),
   background-position: right 20px center;
 }
 
-.select-control:not(:disabled):hover {
+.select-control:not(:disabled):hover,
+.select-control:not(:disabled):focus {
   cursor: pointer;
   border: 2px solid #68A2CA;
+  outline: transparent;
 }
 
 .select-control:disabled {
@@ -1151,6 +1167,11 @@ a.button:not([href]),
 
 .card-button:not(:disabled):hover {
   border: 2px solid #000000;
+}
+
+.card-button:not(:disabled):focus {
+  border: 2px solid #68A2CA;
+  outline: transparent;
 }
 
 .card-button:not(:disabled):active {
@@ -1242,6 +1263,7 @@ a.button:not([href]),
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap:16px 20px ;
 }
 
 .hotel-img {
