@@ -236,7 +236,7 @@ img {
 .main-logo {
   position: relative;
   display: block;
-  margin-right: 30px;
+  margin-right: 29px;
   margin-bottom: -6px;
 }
 
@@ -257,7 +257,7 @@ img {
   justify-content: space-between;
   gap: 30px;
   width: 100%;
-  align-items: start;
+  /* align-items:  start; */
 }
 
 .nav-list {
@@ -280,7 +280,6 @@ img {
 
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
   align-items: center;
 
   min-width: 88px;
@@ -383,8 +382,8 @@ img {
 
 .favorit-page {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 9px;
+  right: 4px;
 }
 
 .favorit-page {
@@ -611,7 +610,7 @@ img {
 }
 
 .subscribe .subtitle {
-  margin-bottom: 56px;
+  margin-bottom: 55px;
 }
 
 .subscribe-form {
@@ -666,12 +665,14 @@ opacity: 0.6;
   justify-content: space-between;
 
   text-align: center;
-  align-items: start;
+  align-items: center;
   padding: 45px 70px 30px;
 }
 
-.phone-text {
+.phone-text-wrapp {
   max-width: 720px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-social {
@@ -681,7 +682,7 @@ opacity: 0.6;
 
   display: flex;
   flex-wrap: wrap;
-  gap: 2px;
+
   max-width: 150px;
 }
 
@@ -725,10 +726,9 @@ opacity: 0.6;
 }
 
 .social-link-you::before {
-  -webkit-mask-image: url(../img/icons/social_tel.svg);
+  -webkit-mask-image: url(../img/icons/social_you.svg);
   mask-image: url(../img/icons/social_you.svg);
 
-  transform: translate(-73%, -50%);
 }
 
 .social-link:hover::before {
@@ -743,6 +743,12 @@ opacity: 0.6;
   display: inline-block;
   width: 115px;
   height: 34px;
+}
+
+.footer-logos-wrapp {
+  max-width: 115px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .htmlacademy-svg {
@@ -791,11 +797,6 @@ opacity: 0.6;
   text-decoration: none;
 }
 
-/* .breadcrumbs-item:not(:first-child) {
-  padding-left: 28px;
-  position: relative;
-} */
-
 .breadcrumbs-item {
   display: flex;
   align-items: center;
@@ -816,6 +817,10 @@ opacity: 0.6;
 
 .breadcrumbs-link:hover {
   opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
 }
 
 /*===================== CATALOG  filter ================== */
@@ -1097,7 +1102,7 @@ opacity: 0.6;
 
   background-image: url("../img/icons/arrow-bottom.svg");
   background-repeat: no-repeat;
-  background-position: right 20px center;
+  background-position: right 18px center;
 }
 
 .select-control:not(:disabled):hover {
@@ -1194,7 +1199,7 @@ opacity: 0.6;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content;
-  gap: 16px;
+  gap: 16px 20px;
 
   align-items: start;
 
@@ -1249,7 +1254,7 @@ opacity: 0.6;
 
 .hotel-img {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 
@@ -1310,7 +1315,7 @@ opacity: 0.6;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-  padding: 40px 0 60px;
+  padding: 38px 0 60px;
 }
 
 .pag-link {
@@ -1437,11 +1442,49 @@ opacity: 0.6;
   border-radius: 4px;
   -webkit-appearance: textfield;
   appearance: textfield;
-
+/*
   background-image: url("../img/icons/calendar.svg");
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: center right 20px;
+  background-position: center right 20px; */
+}
+
+.field-out,
+.field-in {
+  position: relative;
+}
+
+.form-calendar {
+  appearance: none;
+position: absolute;
+top: 14px;
+right: 10px;
+width: 20px;
+height: 20px;
+background-color: rgb(0, 0, 0, 0.3);
+
+-webkit-mask-image: url(../img/icons/calendar.svg);
+-webkit-mask-size: contain;
+-webkit-mask-repeat: no-repeat;
+-webkit-mask-position: center;
+
+mask-image: url(../img/icons/calendar.svg);
+mask-size: 16px;
+mask-repeat: no-repeat;
+mask-position: center;
+
+}
+
+.form-calendar:hover {
+  background-color: rgb(0, 0, 0, 0.6);
+}
+
+.form-calendar:focus {
+outline: auto; /* как сделать фокус???????7*/
+}
+
+.form-calendar:active {
+  background-color: rgb(0, 0, 0, 0.3);
 }
 
 .search-form {
@@ -1545,7 +1588,7 @@ opacity: 0.6;
 .tooltip-text {
   display: none;
 
-  margin-top: 10px;
+  margin-top: 6px;
 
   position: absolute;
   box-sizing: border-box;
@@ -1580,13 +1623,17 @@ opacity: 0.6;
   margin-right: auto;
 
   display: block;
-  width: 19px;
-  height: 9px;
+  width: 1px;
+  height: 1px;
 
-  background-image: url("../img/icons/corner.svg");
+  border: 9px solid transparent;
+  border-bottom: 8px solid #333333;
+
+
+  /* background-image: url("../img/icons/corner.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto;
+  background-size: auto; */
 }
 
 .tooltip-toggle:not(:disabled):hover ~ .tooltip-text,
@@ -1699,6 +1746,13 @@ opacity: 0.6;
   cursor: pointer;
   background-color: #000000;
 }
+
+.btn-counter:focus {
+ outline: auto;
+ outline-offset: -10px ;
+}
+
+
 
 .btn-counter:not(:disabled):active::before {
   cursor: pointer;
