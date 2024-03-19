@@ -156,6 +156,7 @@ img {
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
 
   color: #ffffff;
   background-color: #82B3D3;
@@ -378,6 +379,14 @@ img {
 
 .user-icon:active::before {
   background-color: rgb(117, 97, 87, 0.3);
+}
+
+.navigation .button {
+  max-width: 160px;
+  min-width: 160px;
+
+  padding-left: 8px;
+  padding-right:8px ;
 }
 
 .favorit-page {
