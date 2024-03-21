@@ -186,7 +186,7 @@ img {
   background-color: #7db54f;
 }
 
-.button-select:not(:disabled):hover, {
+.button-select:not(:disabled):hover {
   background-color: #6C9E42;
 }
 
