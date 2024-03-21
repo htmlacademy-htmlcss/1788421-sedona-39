@@ -5,7 +5,6 @@
 * Browsers: last 1 version
 */
 
-
 /*===================== шрифты ===========================*/
 @font-face {
   font-family: "PT Sans";
@@ -43,7 +42,7 @@ body {
   line-height: 21px;
   color: #333333;
 
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 img {
@@ -157,15 +156,14 @@ img {
   text-align: center;
 
   color: #ffffff;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   border-radius: 4px;
   border: none;
 }
 
-.button:not(:disabled):hover,
-.button:not(:disabled):focus {
+.button:not(:disabled):hover {
   cursor: pointer;
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 .button:not(:disabled):active {
@@ -173,28 +171,27 @@ img {
 }
 
 .button:disabled {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 .button-color {
   background-color: #756157;
 }
 
-.button-color:not(:disabled):hover,
-.button-color:not(:disabled):focus {
+.button-color:not(:disabled):hover {
   background-color: #615048;
 }
 
 .button-select {
-  background-color: #7DB54F;
+  background-color: #7db54f;
 }
 
-.button-select:not(:disabled):hover,
-.button-select:not(:disabled):focus {
+.button-select:not(:disabled):hover, {
   background-color: #6C9E42;
 }
 
-.button-light {
+.button-light,
+.filter-btn-wrapp .button-light:focus {
   background-color: transparent;
 }
 
@@ -225,7 +222,7 @@ img {
 }
 
 .button:disabled {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 /*===================== heder ===========================*/
@@ -408,7 +405,7 @@ img {
 
   border-radius: 50%;
   color: #ffffff;
-  background-color: #7DB54F;
+  background-color: #7db54f;
 }
 
 /*===================== hero ===========================*/
@@ -424,7 +421,7 @@ img {
   text-align: center;
 
   color: #ffffff;
-  background-color: #467AA9;
+  background-color: #467aa9;
   background-image: url(../img/background/index-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -613,7 +610,7 @@ img {
 
 .subscribe-main {
   color: #ffffff;
-  background-color: #467AA9;
+  background-color: #467aa9;
   /* цвет для фона просто взят с фоновой картинки пипеткой*/
   background-image: url(../img/background/bg_subscribe.jpg);
   background-size: cover;
@@ -648,7 +645,7 @@ img {
   font-weight: 700;
   border: none;
 
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .field::placeholder {
@@ -656,7 +653,7 @@ img {
 }
 
 .field:not(:disabled):hover {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .input-mail {
@@ -716,7 +713,7 @@ img {
 
   width: 24px;
   height: 17px;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
 
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -746,7 +743,7 @@ img {
 }
 
 .social-link:hover::before {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 .social-link:active::before {
@@ -776,7 +773,7 @@ img {
   padding: 35px 70px 70px;
 
   color: #ffffff;
-  background-color: #467AA9;
+  background-color: #467aa9;
   background-image: url(../img/background/bg_filter.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -984,7 +981,7 @@ img {
 }
 
 .range-toggle:disabled {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 .range-toggle:not(:disabled):hover {
@@ -992,7 +989,7 @@ img {
 }
 
 .range-toggle:not(:disabled):active {
-  border: 2px solid #82B3D3;
+  border: 2px solid #82b3d3;
 }
 
 .toggle-min {
@@ -1109,7 +1106,7 @@ img {
   color: #333333;
 
   background-color: #ffffff;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
 
   background-image: url("../img/icons/arrow-bottom.svg");
@@ -1119,7 +1116,7 @@ img {
 
 .select-control:not(:disabled):hover {
   cursor: pointer;
-  border: 2px solid #68A2CA;
+  border: 2px solid #68a2ca;
 }
 
 .select-control:disabled {
@@ -1147,7 +1144,7 @@ img {
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
 
   background-size: 16px 14px;
@@ -1172,7 +1169,7 @@ img {
 }
 
 .card-button:not(:disabled):active {
-  border: 2px solid #68A2CA;
+  border: 2px solid #68a2ca;
 }
 
 .card-selected {
@@ -1195,7 +1192,7 @@ img {
   gap: 20px 20px;
 
   padding-bottom: 39px;
-  border-bottom: 1px solid #E6E6E6;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .hotel-item {
@@ -1212,7 +1209,7 @@ img {
 
   align-items: start;
 
-  border: 1px solid #E6E6E6;
+  border: 1px solid #e6e6e6;
   border-radius: 4px;
 }
 
@@ -1283,7 +1280,7 @@ img {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 
   border-radius: 4px;
 }
@@ -1345,7 +1342,7 @@ img {
 
 .pag-current {
   color: #000000;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .pag-current:hover {
@@ -1392,7 +1389,7 @@ img {
   right: 52px;
   width: 52px;
   height: 52px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 50%;
   border: none;
   background-image: url("../img/icons/close.svg");
@@ -1402,7 +1399,7 @@ img {
 
 .modal-close-button:hover {
   cursor: pointer;
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .modal-close-button:active {
@@ -1572,7 +1569,7 @@ img {
 
 .tooltip-toggle:hover {
   cursor: pointer;
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 .tooltip-toggle:active {
@@ -1653,7 +1650,7 @@ img {
 .counter-wrapp {
   display: flex;
   margin: 0;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 4px;
 }
 
@@ -1670,7 +1667,7 @@ img {
   text-align: center;
 
   border: none;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .field-number::-webkit-outer-spin-button,
@@ -1688,7 +1685,7 @@ img {
   width: 40px;
   padding: 0;
 
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border: none;
 }
 
