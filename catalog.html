@@ -49,7 +49,9 @@
                 </a>
               </li>
             </ul>
-            <a class="button button-color button-link" href="./modal.html"> Хочу сюда!</a>
+            <div class="nav-btn-wrapp">
+              <a class="button button-color button-link" href="./modal.html"> Хочу сюда!</a>
+            </div>
             <!-- открывает модальное окно -->
           </div>
 
@@ -58,7 +60,7 @@
 
 
       <main class="inner-main" data-test="main">
-        <section class="filters" data-test="filter">
+        <section class="filters">
           <header class="inner-header">
 
             <h1 class="main-title">Гостиницы Седоны</h1>
@@ -88,7 +90,7 @@
 
           <h2 class="visually-hidden">Фильтры</h2>
 
-          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get"  data-test="filter">
 
             <fieldset class="filter-group">
               <legend class="filter-title">Инфраструктура:</legend>
@@ -151,11 +153,10 @@
               </ul>
             </fieldset>
 
-            <div class="filter-wrapp">
-              <fieldset class="filter-group">
+
+              <fieldset class="filter-group filter-group-cost">
                 <legend class="filter-title">Стоимость, ₽:</legend>
 
-                <div class="range">
                   <div class="range-wrapp-field">
 
                     <label class="label-price " for="min-price">
@@ -174,7 +175,6 @@
 
                   </div>
 
-                  <div class="range-scale-wrapp">
                     <div class="range-scale">
                       <div class="range-bar">
                         <button class="range-toggle toggle-min" type="button">
@@ -185,16 +185,18 @@
                         </button>
                       </div>
                     </div>
-                  </div>
-                </div>
 
               </fieldset>
+
+
+
+
 
               <div class="filter-btn-wrapp">
                 <button class="button button-big" type="submit">Применить</button>
                 <button class="button button-light  button-big" type="reset">Сбросить</button>
               </div>
-            </div>
+
           </form>
         </section>
 
@@ -248,7 +250,7 @@
               <!-- какое-то действие по добавлению в избранное -->
 
               <div class="rating-wrap">
-                <div class="star star-4" role="img" aria-label="4 звезды">
+                <div class="star star-4 " role="img" aria-label="4 звезды">
                   <span class="visually-hidden">4 звезды</span>
                 </div>
                 <p class="rating-text btn-card">Рейтинг: <span class="card-rating-value">8,5</span></p>
@@ -347,7 +349,7 @@
         </section>
       </main>
 
-      <footer class="main-footer" data-test="footer">
+      <footer class="main-footer">
         <div class="subscribe" data-test="subscribe">
           <h2 class="title-lead">Подпишитесь на рассылку</h2>
           <p class="subtitle">
@@ -367,7 +369,7 @@
 
         </div>
 
-        <div class="footer-wrapp">
+        <div class="footer-wrapp" data-test="footer">
           <ul class="footer-social">
             <li class="social-item">
               <a class="social-link social-link-vk" href="https://vk.com/htmlacademy">
