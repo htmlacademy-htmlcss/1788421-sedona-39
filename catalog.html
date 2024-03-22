@@ -8,9 +8,6 @@
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./favicon.ico">
-
-    <!-- <link rel="stylesheet" href="./css/outline.css"> -->
-
   </head>
 
   <body>
@@ -58,7 +55,6 @@
         </nav>
       </header>
 
-
       <main class="inner-main" data-test="main">
         <section class="filters">
           <header class="inner-header">
@@ -90,7 +86,7 @@
 
           <h2 class="visually-hidden">Фильтры</h2>
 
-          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get"  data-test="filter">
+          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get" data-test="filter">
 
             <fieldset class="filter-group">
               <legend class="filter-title">Инфраструктура:</legend>
@@ -144,8 +140,7 @@
 
                 <li class="filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="housing"
-                      value="apartments">
+                    <input class="control-input visually-hidden" type="radio" name="housing" value="apartments">
                     <span class="control-mark"></span>
                     <span class="control-label"> Апартаменты</span>
                   </label>
@@ -153,49 +148,44 @@
               </ul>
             </fieldset>
 
+            <fieldset class="filter-group filter-group-cost">
+              <legend class="filter-title">Стоимость, ₽:</legend>
 
-              <fieldset class="filter-group filter-group-cost">
-                <legend class="filter-title">Стоимость, ₽:</legend>
+              <div class="range-wrapp-field">
 
-                  <div class="range-wrapp-field">
+                <label class="label-price " for="min-price">
+                  <span class="label-price-text">от</span>
 
-                    <label class="label-price " for="min-price">
-                      <span class="label-price-text">от</span>
+                  <input class="field min-max-price min-price" type="number" id="min-price" name="min-price" value="0"
+                    min="0" placeholder="min">
+                </label>
 
-                      <input class="field min-max-price min-price" type="number" id="min-price" name="min-price"
-                        value="0" min="0" placeholder="min">
-                    </label>
+                <label class="label-price" for="max-price">
+                  <span class="label-price-text">до</span>
 
-                    <label class="label-price" for="max-price">
-                      <span class="label-price-text">до</span>
+                  <input class="field min-max-price max-price" type="number" id="max-price" name="max-price"
+                    value="9000" min="0" placeholder="max">
+                </label>
 
-                      <input class="field min-max-price max-price" type="number" id="max-price" name="max-price"
-                        value="9000" min="0" placeholder="max">
-                    </label>
-
-                  </div>
-
-                    <div class="range-scale">
-                      <div class="range-bar">
-                        <button class="range-toggle toggle-min" type="button">
-                          <span class="visually-hidden">Изменить минимальную цену</span>
-                        </button>
-                        <button class="range-toggle toggle-max" type="button">
-                          <span class="visually-hidden">Изменить максимальную цену</span>
-                        </button>
-                      </div>
-                    </div>
-
-              </fieldset>
-
-
-
-
-
-              <div class="filter-btn-wrapp">
-                <button class="button button-big" type="submit">Применить</button>
-                <button class="button button-light  button-big" type="reset">Сбросить</button>
               </div>
+
+              <div class="range-scale">
+                <div class="range-bar">
+                  <button class="range-toggle toggle-min" type="button">
+                    <span class="visually-hidden">Изменить минимальную цену</span>
+                  </button>
+                  <button class="range-toggle toggle-max" type="button">
+                    <span class="visually-hidden">Изменить максимальную цену</span>
+                  </button>
+                </div>
+              </div>
+
+            </fieldset>
+
+            <div class="filter-btn-wrapp">
+              <button class="button button-big" type="submit">Применить</button>
+              <button class="button button-light  button-big" type="reset">Сбросить</button>
+            </div>
 
           </form>
         </section>
@@ -308,7 +298,7 @@
               </a>
 
               <p class="hotel-type">Гостиница
-                <span class="hotel-price">От <span class="card-price-value">1500</span>  ₽</span>
+                <span class="hotel-price">От <span class="card-price-value">1500</span> ₽</span>
               </p>
 
               <a class="button button-color button-link btn-card" href="">подробнее</a>
@@ -364,7 +354,7 @@
             <input class="field input-mail" placeholder="Ваш e-mail" type="email" name="subscribe-email"
               id="subscribe-email" required>
 
-            <button class="button button-big" type="submit">Подписаться</button>
+            <button class="button button-big button-big-text" type="submit">Подписаться</button>
           </form>
 
         </div>
@@ -404,8 +394,6 @@
         </div>
       </footer>
     </div>
-    <!-- <script src="./js/test.js"></script> -->
-
   </body>
 
 </html>
