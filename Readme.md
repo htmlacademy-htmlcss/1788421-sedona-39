@@ -1,10 +1,12 @@
 # Личный проект «Седона»
 
 * Студент: [Виктория Калугина](https://up.htmlacademy.ru/htmlcss/39/user/1788421).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Зиновьев](https://htmlacademy.ru/profile/id198751)
+
+* Мой проект: [Седона](https://toryatoria.github.io/1788421-sedona-39/)
 
 ---
-
+>>>>>>> master
 _Не удаляйте и не обращайте внимание на файлы:_<br>
 _`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`._
 
