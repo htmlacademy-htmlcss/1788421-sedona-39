@@ -48,9 +48,9 @@
               </li>
             </ul>
             <div class="nav-btn-wrapp">
-              <a class="button button-color button-link" href="./modal.html"> Хочу сюда!</a>
+              <button class="button button-color button-link" type="button"> Хочу сюда!</button>
+              <!-- открывает модальное окно -->
             </div>
-            <!-- открывает модальное окно -->
           </div>
 
         </nav>
@@ -105,7 +105,7 @@
           </ul>
         </section>
 
-        <section class="service"  data-test="service">
+        <section class="service" data-test="service">
 
           <div class="servise-wrapp">
             <h2 class="visually-hidden">Сервис</h2>
@@ -210,57 +210,58 @@
         </div>
       </footer>
 
-      <!-- /*===================== Модальное окно  открвается по кнопке "Хочу сюда!"=====================*/ -->
+      <!-- /*===================== Модальное окно  открвается по кнопке "Хочу сюда!"============*/ -->
 
       <div class="modal-container">
         <div class="modal modal-search" data-test="modal">
 
-          <a class="modal-close-button" href="./index.html">
+          <button class="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть</span>
-          </a>
+          </button>
 
           <section class="modal-content">
             <h2 class="title-lead modal-title">Поиск гостиницы в Седоне</h2>
 
             <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
 
-              <label class="form-label label-data-in" for="search-in">
-                Дата заезда:
-              </label>
+              <label class="form-label label-data-in" for="search-in">Дата заезда:</label>
 
               <div class="field-in">
-                <button type="button" class=" form-calendar">
-                  <span class="visually-hidden">календарь</span>
-                </button>
 
-                <input class="field search-form-field field-in-valid " type="text" id="search-in" name="search-in"
-                  placeholder="27 апреля 2020" value="27 апреля 2020" required>
+                <div class="form-calendar-wrapp">
+                  <input class="field search-form-field" type="text" id="search-in" name="search-in"
+                    placeholder="27 апреля 2020" value="27 апреля 2020" required>
 
-                <span class="field-sign field-sign-invalid  field-sign-hide">
+                  <button type="button" class=" form-calendar">
+                    <span class="visually-hidden">календарь</span>
+                  </button>
+                </div>
+
+                <span class="field-sign field-sign-invalid">
                   Мы не можем отправить вас в прошлое.
                 </span>
+
+
               </div>
 
-              <label class="form-label label-data-out" for="search-out">
-                Дата выезда:
-              </label>
+              <label class="form-label label-data-out" for="search-out">Дата выезда: </label>
 
               <div class="field-out">
-                <button type="button" class=" form-calendar">
-                  <span class="visually-hidden">календарь</span>
-                </button>
 
-                <input class="field search-form-field " type="text" id="search-out" name="search-out"
-                  placeholder="1 сентября 2023" value="1 сентября 2023">
+                <div class="form-calendar-wrapp">
+                  <input class="field search-form-field " type="text" id="search-out" name="search-out"
+                    placeholder="1 сентября 2023" value="1 сентября 2023">
 
+                  <button type="button" class=" form-calendar">
+                    <span class="visually-hidden">календарь</span>
+                  </button>
+                </div>
                 <span class="field-sign field-sign-hide">
                   На эти даты есть свободные номера. Пока есть.
                 </span>
               </div>
 
-              <label class="form-label label-audlts" for="search-audlts">
-                Взрослые:
-              </label>
+              <label class="form-label label-audlts" for="search-audlts">Взрослые:</label>
 
               <p class="counter-wrapp counter-wrapp-audlts">
                 <button class="btn-counter btn-minus" type="button">
@@ -276,10 +277,10 @@
               </p>
 
               <span class="form-label label-children ">
-                <label for="search-children"> Дети: </label>
+                <label for="search-children">Дети:</label>
 
                 <span class="tooltip">
-                  <button class="tooltip-toggle" type="button" >
+                  <button class="tooltip-toggle" type="button">
                     <span class="visually-hidden">
                       Дополнительная информация о детях
                     </span>
