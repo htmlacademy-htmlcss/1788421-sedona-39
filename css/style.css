@@ -1660,6 +1660,15 @@ img {
   margin: 0;
   background-color: #f2f2f2;
   border-radius: 4px;
+
+}
+
+.btn-minus {
+  border-radius: 4px 0 0 4px;
+}
+
+.btn-plus {
+  border-radius: 0 4px 4px 0;
 }
 
 .field-number {
@@ -1693,6 +1702,7 @@ img {
   padding: 14px 10px;
 
   border: none;
+  background-color: transparent;
 }
 
 .btn-counter::before {
