@@ -360,14 +360,14 @@ img {
 }
 
 .user-icon-serch::before {
-  -webkit-mask-image: url(../img/icons/search.svg);
-  mask-image: url(../img/icons/search.svg);
+  -webkit-mask-image: url("../img/icons/search.svg");
+  mask-image: url("../img/icons/search.svg");
 
 }
 
 .user-icon-favorit::before {
-  -webkit-mask-image: url(../img/icons/favourites.svg);
-  mask-image: url(../img/icons/favourites.svg);
+  -webkit-mask-image: url("../img/icons/favourites.svg");
+  mask-image: url("../img/icons/favourites.svg");
 }
 
 .user-icon:hover::before {
@@ -431,7 +431,7 @@ img {
 
   color: #ffffff;
   background-color: #467aa9;
-  background-image: url(../img/background/index-background.jpg);
+  background-image: url("../img/background/index-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -450,7 +450,7 @@ img {
   height: 57px;
   margin-top: 25px;
 
-  background-image: url(../img/background/decor-corner.svg);
+  background-image: url("../img/background/decor-corner.svg");
   background-size: 100%, auto;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -577,15 +577,15 @@ img {
 }
 
 .icon-home::before {
-  background-image: url(../img/offer/offer_home.svg)
+  background-image: url("../img/offer/offer_home.svg")
 }
 
 .icon-food::before {
-  background-image: url(../img/offer/offer_food.svg)
+  background-image: url("../img/offer/offer_food.svg")
 }
 
 .icon-present::before {
-  background-image: url(../img/offer/offer_present.svg)
+  background-image: url("../img/offer/offer_present.svg")
 }
 
 /*===================== search ===========================*/
@@ -618,7 +618,7 @@ img {
   color: #ffffff;
   background-color: #467aa9;
   /* цвет для фона просто взят с фоновой картинки пипеткой*/
-  background-image: url(../img/background/bg_subscribe.jpg);
+  background-image: url("../img/background/bg_subscribe.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -654,6 +654,7 @@ img {
 
 .field::placeholder {
   color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
 }
 
 .field:not(:disabled):hover {
@@ -669,6 +670,7 @@ img {
   display: inline;
   flex-grow: 1;
   border-radius: 4px 0 0 4px;
+  font-weight: 400;
 }
 
 .subscribe-form .button {
@@ -731,19 +733,19 @@ img {
 }
 
 .social-link-vk::before {
-  -webkit-mask-image: url(../img/icons/social_vk.svg);
-  mask-image: url(../img/icons/social_vk.svg);
+  -webkit-mask-image: url("../img/icons/social_vk.svg");
+  mask-image: url("../img/icons/social_vk.svg");
 }
 
 
 .social-link-tg::before {
-  -webkit-mask-image: url(../img/icons/social_tel.svg);
-  mask-image: url(../img/icons/social_tel.svg);
+  -webkit-mask-image: url("../img/icons/social_tel.svg");
+  mask-image: url("../img/icons/social_tel.svg");
 }
 
 .social-link-you::before {
-  -webkit-mask-image: url(../img/icons/social_tel.svg);
-  mask-image: url(../img/icons/social_you.svg);
+  -webkit-mask-image: url("../img/icons/social_tel.svg");
+  mask-image: url("../img/icons/social_you.svg");
 
   transform: translate(-73%, -50%);
 }
@@ -780,7 +782,7 @@ img {
 
   color: #ffffff;
   background-color: #467aa9;
-  background-image: url(../img/background/bg_filter.jpg);
+  background-image: url("../img/background/bg_filter.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -820,7 +822,7 @@ img {
   height: 10px;
   padding-right: 10px;
 
-  background-image: url(../img/icons/arrow_right.svg);
+  background-image: url("../img/icons/arrow_right.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -1574,7 +1576,7 @@ img {
   border-radius: 50%;
   border: none;
 
-  background-image: url(../img/icons/tooltip-icon.svg);
+  background-image: url("../img/icons/tooltip-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
@@ -1706,7 +1708,7 @@ img {
 }
 
 .btn-counter::before {
-  content: '';
+  content: "";
   display: block;
   width: 20px;
   height: 20px;
